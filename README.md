@@ -12,5 +12,6 @@ This guide is oppinionated in the sense that it assumes you are using our workfl
 - Karma 
 - Jasmine
 - Proctractor
+- ES5 JavaScript
 
 We reccommend scaffolding from the yeoman generator [Gulp-Angular](https://www.npmjs.com/package/gulp-angular).
