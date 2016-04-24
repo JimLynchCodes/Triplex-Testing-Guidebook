@@ -12,6 +12,6 @@ This guide is oppinionated in the sense that it assumes you are using our workfl
 - Jasmine
 - Proctractor
 - ES5 JavaScript
-- Angular JS 1.3, 1.4, or 1,5
+- AngularJS 1.3, 1.4, or 1,5
 
 We reccommend scaffolding from the yeoman generator [Gulp-Angular](https://www.npmjs.com/package/gulp-angular).
