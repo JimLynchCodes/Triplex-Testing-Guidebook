@@ -7,6 +7,30 @@ The Front-End testing triforce is a way of thinking about testing applications b
 
 ## The Triforce
 
+![testing triforce](./testing-triforce.png "Logo Title Text 1")
+
+
+The triforce is a symbol from The Legend of Zelda"
+
+Here we use it to represent the three types of automated tests that we like to use. 
+
+- Acceptance Tests
+- E2e Tests
+- Unit Tests
+
+## Acceptance Tests
+
+These are tests that...
+
+## E2e Tests
+
+These are tests that...
+
+## Unit Tests
+These are tests that...
+
+
+
 This guide was developed by @webWhizJim and is maintained by ng-nj, the Angular Group of New Jersey.
 
 This is a standardized approach for setting up unit and e2e tests for common situations when developing new featuers in AngularJS.
