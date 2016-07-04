@@ -6,7 +6,7 @@ Table of Contents
   - [Part 1: Intro to The Testing Triforce](#Intro to Unit Testing)
     - [link text](#abcd)
     - [else](#else)
-  - Part 2: The Testing Triforce in Practice
+  - [Part 2: The Testing Triforce in Practice](#The Triforce in Practice)
   - Part 3: Additional Benefits of Triforce Development
   - Part 4: Frequently Asked Questions
 
@@ -59,8 +59,10 @@ These are tests that do hit external endpoints. Normally, we set these up in a s
 
 Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance tests should not steal any thunder at all from the classic unit tests. These are concerned with checking individual functions. These normally return a coverage report, and as always we aim for 100% coverage by unit tests. 
 
+
+<div name="The Triforce in Practice"></div>
+##The Triforce in Practice
 --- 
-#The Triforce in Practice
 
 ## Gherkin Comes First
 
