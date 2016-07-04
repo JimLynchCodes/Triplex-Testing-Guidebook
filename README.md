@@ -10,23 +10,33 @@ Table of Contents
     - [Purpose of The Testing Triforce](#Purpose of The Testing Triforce)
     - [It's Not Specific Angular](#It's Not Specific Angular)
     - [This is a Guide](#This is a Guide)
-    - [The Triforce Diagram](#The Triforce Diagram)
   - [Part 2: The Three Types of Automated Tests](#The Three Types of Automated Tests)
+    - [The Triforce Diagram](#The Triforce Diagram)
     - [Acceptance Tests](#Acceptance Tests)
     - [E2e Tests](#E2e Tests)
     - [Unit Tests](#Unit Tests)
   - [Part 3: The Testing Triforce in Practice](#The Triforce in Practice)
+    - [The Gherkin Comes First](#The Gherkin Comes First)
+    - [Implement Step Definitions with Protractor](#Implement Step Definitions with Protractor)
+    - [Implement E2e Tests in a Separate Protractor Config file](#Implement E2e Tests in a Separate Protractor Conf.js file)
+    - [Write Unit Tests and Code TDD Style](#Write Unit Tests and Code TDD Style)
+    - [Deployment](#Deployment)
+    - [Testing On Multiple Browsers](#Testing On Multiple Browsers)
+    - [Triforce Tester Certification](#Triforce Tester Certification)
   - [Part 4: Additional Benefits of Triforce Development](#Additional Benefits of Triforce Development)
+    - [Beter Team COmmunication and Ubiquitous Language](#Beter Team COmmunication and Ubiquitous Language)
+    - [The Requirements and Code Are Always In Sync](#The Requirements and Code Are Always In Sync)
+    - [Living Documentation](#Living Documentation)
   - [Part 5: Reporting](#Reporting)
-    - Generating Reports From the Codebase
-    - Meetings with "The Boss"
-    - Sample Reports
+    - [Generating Reports From the Codebase](#Generating Reports From the Codebase)
+    - [Meetings with "The Boss"](#Meetings with "The Boss")
+    - [Sample Reports](#Sample Reports)
   - [Part 4: Frequently Asked Questions](#FAQ)
-    - Q. Why is it wrong to treat low level step definitions like unit tests?
-    - Q. Do I *need* to use acceptance tests?
-    - Q. Do I *need* to use unit tests?
-    - Q. Do I *need* to use e2e tests?
-    - Q. When should I *NOT* use the Testing Triforce?
+    - [Q. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
+    - [Q. Do I *need* to use acceptance tests?](#Q2)
+    - [Q. Do I *need* to use unit tests?](#Q3)
+    - [Q. Do I *need* to use e2e tests?](#Q4)
+    - [Q. When should I *NOT* use the Testing Triforce?](#Q5)
 
 
 -
