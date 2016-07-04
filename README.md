@@ -1,13 +1,20 @@
 # The Front End Testing Triforce 
 
+A three-pronged approach for automated testing of front-end applications. 
+
 ### History of The Testing Triforce
-Some
+The Testing Triforce phrase was coined by Jim Lynch. While working as an angularJS developer he was doing standard unit testing along with some Protractor tests. Jim then read a book on BDD (Behavior Driven Development) and fell in love with the gherkin syntax and the way is was connected to step definitions. It was unclear how exactly to fit this into an Angular, SPA, or general JavaScript project in a way that gelled nicely with the other types of automated tests.  
 
 ### Purpose of The Testing Triforce
 
-The Front-End testing triforce is a way of thinking about testing applications built on HTML, CSS, and JavaScript. There are many different testing techniques, and at ng-nj we've decided on three core types of testing for our applications. This has been hugely successful for us, and in this document we're sharing our methodologies with the world for those who are interested in automated testing techniques
+The testing triforce is meant to prescribe a way for writing three types of automated tests: acceptance tests, e2e tests, and unit tests, but even more than that it builds on the test-first theories of TDD. Thus, the testing triforce becomes a tao, or way of developing software where the result is truly transparent, agile, and well-done.
 
-## Automated Vs Manual Testing
+### Not Angular-Specific
+It should be noted that the Testing Triforce is not something that is dependant on the Angular library. It can be applied to really any project made from html, css, and javascript. It can even be applied to other front-end platforms like .NET, Ios, Android, Java, Ruby, C++, etc. For the examples shown here I'm using AngularJS 1.5 in Ecmascript 5. 
+
+### Testing Tooling for Web Applications
+
+
 
 
 ## The Triforce
