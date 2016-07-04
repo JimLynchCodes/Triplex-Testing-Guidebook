@@ -2,17 +2,22 @@
 
 A three-pronged approach for automated testing of front-end applications. 
 
+---
+
 Table of Contents
   - [Part 1: Intro to The Testing Triforce](#Intro to Unit Testing)
     - [link text](#abcd)
     - [else](#else)
   - [Part 2: The Testing Triforce in Practice](#The Triforce in Practice)
-  - Part 3: Additional Benefits of Triforce Development
-  - Part 4: Frequently Asked Questions
+  - [Part 3: Additional Benefits of Triforce Development](#Additional Benefits of Triforce Development)
+  - [Part 4: Frequently Asked Questions](#FAQ)
+
+
+-
 
 <div name="Intro to Unit Testing"></div>
-##Intro to The Testing Triforce
-
+## Part 1: Intro to The Testing Triforce
+---
 ### History of The Testing Triforce
 The Testing Triforce phrase was coined by Jim Lynch. While working as an angularJS developer he was doing standard unit testing along with some Protractor tests. Jim then read a book on BDD (Behavior Driven Development) and fell in love with the gherkin syntax and the way is was connected to step definitions. It was unclear how exactly to fit this into an Angular, SPA, or general JavaScript project in a way that gelled nicely with the other types of automated tests.  
 
@@ -61,7 +66,7 @@ Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance
 
 
 <div name="The Triforce in Practice"></div>
-##The Triforce in Practice
+## Part 2: The Triforce in Practice
 --- 
 
 ## Gherkin Comes First
@@ -73,15 +78,27 @@ Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance
 
 ## Write the actually code in the usual TDD style with unit tests is code while using the protractor tests and gherkin feature files as a guide for what the code should do.
 
-
---- 
+## Deployment
+We recommend a CI pipeline that will automatically run 1) your acceptance tests protrator file, 2) your e2e tests protractor file, and 3) your karma unit tests file. If you don't have a CI server set up, you could always run these three tests manually. The key is that you trust these tests so that they will continue to be run and maintained as the development unfolds. 
 
 ### Triforce Tester Certification
 If you've been practicing Triforce Testing Development for over a year and would like to try to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
 
-### FAQ
 
-Q. 
+<div name="Additional Benefits of Triforce Development"></div>
+## Part 3: Additional Benefits of Triforce Development
+
+## Better Team Communication & Ubiquitous Language
+
+## Living Documentation
+Cucumber reposrts, unit test reports, protractor reports(?)
+
+## Planning Specs and Code Always In Sync
+
+<div name="FAQ"></div>
+## Part 4: Frequently Asked Questions
+
+There are currently no questions in the FAQ section. PleASe ask a question by submitting an issue.
 
 
 
