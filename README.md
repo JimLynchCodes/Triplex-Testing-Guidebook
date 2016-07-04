@@ -1,4 +1,4 @@
-# The Testing Triforce 
+# The Front End Testing Triforce Guide
 
 A three-pronged approach for automated testing of front-end applications. 
 
