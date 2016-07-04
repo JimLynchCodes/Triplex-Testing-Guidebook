@@ -1,4 +1,9 @@
-# Understanding the Front End Testing Triforce 
+# The Front End Testing Triforce 
+
+### History of The Testing Triforce
+Some
+
+### Purpose of The Testing Triforce
 
 The Front-End testing triforce is a way of thinking about testing applications built on HTML, CSS, and JavaScript. There are many different testing techniques, and at ng-nj we've decided on three core types of testing for our applications. This has been hugely successful for us, and in this document we're sharing our methodologies with the world for those who are interested in automated testing techniques
 
@@ -8,7 +13,7 @@ The Front-End testing triforce is a way of thinking about testing applications b
 ## The Triforce
 
 ![testing triforce](./testing-triforce.png "Logo Title Text 1")
-
+- credit: the triforce image is a copyrighted symbol of Nintendo Corporation. 
 
 The triforce is a symbol popularized by the video games franchise "The Legend of Zelda".
 
