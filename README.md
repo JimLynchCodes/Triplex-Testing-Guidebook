@@ -3,10 +3,15 @@
 A three-pronged approach for automated testing of front-end applications. 
 
 Table of Contents
-  - [link text](#abcd)
-  - - [else](#else)
-  
+  - [Part 1: Intro to The Testing Triforce](#Intro to Unit Testing)
+    - [link text](#abcd)
+    - [else](#else)
+  - Part 2: The Testing Triforce in Practice
+  - Part 3: Additional Benefits of Triforce Development
+  - Part 4: Frequently Asked Questions
 
+<div name="Intro to Unit Testing"></div>
+##Intro to The Testing Triforce
 
 ### History of The Testing Triforce
 The Testing Triforce phrase was coined by Jim Lynch. While working as an angularJS developer he was doing standard unit testing along with some Protractor tests. Jim then read a book on BDD (Behavior Driven Development) and fell in love with the gherkin syntax and the way is was connected to step definitions. It was unclear how exactly to fit this into an Angular, SPA, or general JavaScript project in a way that gelled nicely with the other types of automated tests.  
@@ -54,6 +59,20 @@ These are tests that do hit external endpoints. Normally, we set these up in a s
 
 Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance tests should not steal any thunder at all from the classic unit tests. These are concerned with checking individual functions. These normally return a coverage report, and as always we aim for 100% coverage by unit tests. 
 
+--- 
+#The Triforce in Practice
+
+## Gherkin Comes First
+
+
+## Implement Step Definitions with Protractor Selenium Tests
+
+## Implement E2e Tests in a Separate Protractor Conf.js file.
+
+## Write the actually code in the usual TDD style with unit tests is code while using the protractor tests and gherkin feature files as a guide for what the code should do.
+
+
+--- 
 
 ### Triforce Tester Certification
 If you've been practicing Triforce Testing Development for over a year and would like to try to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
