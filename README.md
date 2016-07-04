@@ -2,6 +2,11 @@
 
 A three-pronged approach for automated testing of front-end applications. 
 
+Table of Contents
+  - [link text](#abcd)
+  
+
+
 ### History of The Testing Triforce
 The Testing Triforce phrase was coined by Jim Lynch. While working as an angularJS developer he was doing standard unit testing along with some Protractor tests. Jim then read a book on BDD (Behavior Driven Development) and fell in love with the gherkin syntax and the way is was connected to step definitions. It was unclear how exactly to fit this into an Angular, SPA, or general JavaScript project in a way that gelled nicely with the other types of automated tests.  
 
@@ -47,4 +52,9 @@ These are tests that do hit external endpoints. Normally, we set these up in a s
 Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance tests should not steal any thunder at all from the classic unit tests. These are concerned with checking individual functions. These normally return a coverage report, and as always we aim for 100% coverage by unit tests. 
 
 
+### Triforce Tester Certification
+If you've been practicing Triforce Testing Development for over a year and would like to try to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
+
+---
+<a name="abcd"></a>
 This guide is maintained by ng-nj, the Angular Group of New Jersey.
