@@ -31,7 +31,7 @@ Here we use it to represent the three types of automated tests that we like to u
 - Unit Tests
 
 ## Acceptance Tests
-![cucumber](./images/cucumber.png "Cucumber")![karma](./images/protractor.png "Protractor")![chai-mocha](./images/mocha-chai.png =250x) 
+![cucumber](./images/cucumber.png =50x)![karma](./images/protractor.png "Protractor")![chai-mocha](./images/mocha-chai.png =250x) 
 
 These are tests that come from the theory of behavior-driven development. They consist of two types of files– feature files and step definition files. At ng-nj, we like to use Cucumber.js for this, and we recommend running it through Protractor by selecting the cucumber framework in your protractor.conf.js file. Although these tests are "web tests" and focus on testing the ui in a selenium-like fashion, these tests should use mock data and should NOT be hitting external endpoints. Since these are high level feature specifications tied to low-level step defintions, these tests will cover all of the acceptance criteria for the project.  
 
