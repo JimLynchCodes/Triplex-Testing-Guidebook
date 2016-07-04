@@ -4,6 +4,7 @@ A three-pronged approach for automated testing of front-end applications.
 
 Table of Contents
   - [link text](#abcd)
+  - - [else](#else)
   
 
 
@@ -40,6 +41,7 @@ Here we use it to represent the three types of automated tests that we like to u
 
 These are tests that come from the theory of behavior-driven development. They consist of two types of files– feature files and step definition files. At ng-nj, we like to use Cucumber.js for this, and we recommend running it through Protractor by selecting the cucumber framework in your protractor.conf.js file. Although these tests are "web tests" and focus on testing the ui in a selenium-like fashion, these tests should use mock data and should NOT be hitting external endpoints. Since these are high level feature specifications tied to low-level step defintions, these tests will cover all of the acceptance criteria for the project.  
 
+<div name="else"></div>
 ## E2e Tests
 ![karma](./images/protractor.png "Protractor") ![jasmine](./images/jasmine.png "Jasmine") ![chai-mocha](./images/mocha-chai.png "Chai-Mocha") 
 
