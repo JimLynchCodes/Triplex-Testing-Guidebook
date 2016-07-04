@@ -6,8 +6,13 @@ A three-pronged approach for automated testing of front-end applications.
 
 Table of Contents
   - [Part 1: Intro to The Testing Triforce](#Intro to Unit Testing)
-    - [link text](#abcd)
-    - [else](#else)
+    - [History of the Testing Triforce](#history)
+    - [Purpose of The Testing Triforce](#Purpose of The Testing Triforce)
+    - [It's Not Specific Angular](#It's Not Specific Angular)
+    - [The Triforce](#The Triforce)
+    - [Acceptance Test](#Acceptance Tests)
+    - [E2e Test](#E2e Tests)
+    - [Unit Test](#Unit Tests)
   - [Part 2: The Testing Triforce in Practice](#The Triforce in Practice)
   - [Part 3: Additional Benefits of Triforce Development](#Additional Benefits of Triforce Development)
   - [Part 4: Frequently Asked Questions](#FAQ)
@@ -18,21 +23,20 @@ Table of Contents
 <div name="Intro to Unit Testing"></div>
 ## Part 1: Intro to The Testing Triforce
 ---
+<div name="history"></div>
 ### History of The Testing Triforce
 The Testing Triforce phrase was coined by Jim Lynch. While working as an angularJS developer he was doing standard unit testing along with some Protractor tests. Jim then read a book on BDD (Behavior Driven Development) and fell in love with the gherkin syntax and the way is was connected to step definitions. It was unclear how exactly to fit this into an Angular, SPA, or general JavaScript project in a way that gelled nicely with the other types of automated tests.  
 
+<div name="Purpose of The Testing Triforce"></div>
 ### Purpose of The Testing Triforce
 
 The testing triforce is meant to prescribe a way for writing three types of automated tests: acceptance tests, e2e tests, and unit tests, but even more than that it builds on the test-first theories of TDD. Thus, the testing triforce becomes a tao, or way of developing software where the result is truly transparent, agile, and well-done.
 
-### Not Angular-Specific
-It should be noted that the Testing Triforce is not something that is dependant on the Angular library. It can be applied to really any project made from html, css, and javascript. It can even be applied to other front-end platforms like .NET, Ios, Android, Java, Ruby, C++, etc. For the examples shown here I'm using AngularJS 1.5 in Ecmascript 5. 
+<div name="It's Not Specific Angular"></div>
+### It's Not Specific Angular
+It should be noted that the Testing Triforce is not something that is dependant on the Angular library. It can be applied to really any project made from html, css, and javascript which can be tested with Protractor and JavaScript unit testing framework like Jasmine or Chai-Mocha. It can even be applied to other front-end platforms like .NET, Ios, Android, Java, Ruby, C++, etc. although you will need the equivalent tooling for that platform. 
 
-### Testing Tooling for Web Applications
-
-
-
-
+<div name="The Triforce"></div>
 ## The Triforce
 
 ![testing triforce](./images/testing-triforce.png "Testing Triforce")
@@ -40,24 +44,33 @@ It should be noted that the Testing Triforce is not something that is dependant 
 
 The triforce is a symbol popularized by the video games franchise "The Legend of Zelda".
 
-Here we use it to represent the three types of automated tests that we like to use. 
+Here we use it to represent the three types of automated tests: 
 
 - Acceptance Tests
 - E2e Tests
 - Unit Tests
 
+<div name="Acceptance Tests"></div>
 ## Acceptance Tests
+
+Acceptance tests, at the vwry top of the triforce, should be the starting point at the beginning of any automated testing effort. Because it necessarily forces you to think about the application in high level terms about what it is actually doing, it is a perfect way to **figure out what you want to build** while at the same time *effectively communicating those ideas to the developers, business analysts, and other stakeholders*. 
+
+Acceptance tests don't end with the feature files in Gherkin syntax. Acceptance tests refer to both the feature files and the step definition files. These should be basically selenium web-tests. Some people may be inclined to treat the low level step definition methods as if they were unit tests. **Don't fall into this trap.**
+
+
+
+
 ![cucumber](./images/cucumber.png =50x)![karma](./images/protractor.png "Protractor")![chai-mocha](./images/mocha-chai.png =250x) 
 
 These are tests that come from the theory of behavior-driven development. They consist of two types of files– feature files and step definition files. At ng-nj, we like to use Cucumber.js for this, and we recommend running it through Protractor by selecting the cucumber framework in your protractor.conf.js file. Although these tests are "web tests" and focus on testing the ui in a selenium-like fashion, these tests should use mock data and should NOT be hitting external endpoints. Since these are high level feature specifications tied to low-level step defintions, these tests will cover all of the acceptance criteria for the project.  
 
-<div name="else"></div>
+<div name="E2e Tests"></div>
 ## E2e Tests
 ![karma](./images/protractor.png "Protractor") ![jasmine](./images/jasmine.png "Jasmine") ![chai-mocha](./images/mocha-chai.png "Chai-Mocha") 
 
 These are tests that do hit external endpoints. Normally, we set these up in a separate protractor.conf.js file. Althoguh we use protractor for these tests, they are not as concerned with simulating an actual user interacting with the application. These tests are solely with interacting with external resources to ensure that they work as expected. 
 
-<div name="abcd"></div>
+<div name="Unit Tests"></div>
 ## Unit Tests
 
 ![karma](./images/karma.png "Karma") ![jasmine](./images/jasmine.png "Jasmine") ![chai-mocha](./images/mocha-chai.png "Chai-Mocha") 
