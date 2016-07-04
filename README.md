@@ -45,6 +45,7 @@ These are tests that come from the theory of behavior-driven development. They c
 
 These are tests that do hit external endpoints. Normally, we set these up in a separate protractor.conf.js file. Althoguh we use protractor for these tests, they are not as concerned with simulating an actual user interacting with the application. These tests are solely with interacting with external resources to ensure that they work as expected. 
 
+<div name="abcd"></div>
 ## Unit Tests
 
 ![karma](./images/karma.png "Karma") ![jasmine](./images/jasmine.png "Jasmine") ![chai-mocha](./images/mocha-chai.png "Chai-Mocha") 
@@ -55,6 +56,12 @@ Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance
 ### Triforce Tester Certification
 If you've been practicing Triforce Testing Development for over a year and would like to try to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
 
+### FAQ
+
+Q. 
+
+
+
 ---
-<a name="abcd"></a>
+
 This guide is maintained by ng-nj, the Angular Group of New Jersey.
