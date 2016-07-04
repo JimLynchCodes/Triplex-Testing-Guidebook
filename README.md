@@ -9,13 +9,24 @@ Table of Contents
     - [History of the Testing Triforce](#history)
     - [Purpose of The Testing Triforce](#Purpose of The Testing Triforce)
     - [It's Not Specific Angular](#It's Not Specific Angular)
-    - [The Triforce](#The Triforce)
+    - [This is a Guide](#This is a Guide)
+    - [The Triforce Diagram](#The Triforce Diagram)
+  - [Part 2: The Three Types of Automated Tests](#The Three Types of Automated Tests)
     - [Acceptance Tests](#Acceptance Tests)
     - [E2e Tests](#E2e Tests)
     - [Unit Tests](#Unit Tests)
-  - [Part 2: The Testing Triforce in Practice](#The Triforce in Practice)
-  - [Part 3: Additional Benefits of Triforce Development](#Additional Benefits of Triforce Development)
+  - [Part 3: The Testing Triforce in Practice](#The Triforce in Practice)
+  - [Part 4: Additional Benefits of Triforce Development](#Additional Benefits of Triforce Development)
+  - [Part 5: Reporting](#Reporting)
+    - Generating Reports From the Codebase
+    - Meetings with "The Boss"
+    - Sample Reports
   - [Part 4: Frequently Asked Questions](#FAQ)
+    - Q. Why is it wrong to treat low level step definitions like unit tests?
+    - Q. Do I *need* to use acceptance tests?
+    - Q. Do I *need* to use unit tests?
+    - Q. Do I *need* to use e2e tests?
+    - Q. When should I *NOT* use the Testing Triforce?
 
 
 -
@@ -36,8 +47,12 @@ The testing triforce is meant to prescribe a way for writing three types of auto
 ### It's Not Specific Angular
 It should be noted that the Testing Triforce is not something that is dependant on the Angular library. It can be applied to really any project made from html, css, and javascript which can be tested with Protractor and JavaScript unit testing framework like Jasmine or Chai-Mocha. It can even be applied to other front-end platforms like .NET, Ios, Android, Java, Ruby, C++, etc. although you will need different tooling for that platform than what is discussed here. 
 
-<div name="The Triforce"></div>
-## The Triforce
+<div name="This is a Guide"></div>
+### This is a Guide
+This document is meant to be a guide for implementing Triforce testing into your own project. Rather than be taken as gospel, the ideas expressed here are meant to convince you of the benefits of implementing these three types of automated testing. The prescribes methodoligies here have been tried a tested, but you are free to change things in your own case if you find it necessary to do so.
+
+<div name="The Triforce Diagram"></div>
+## The Triforce Diagram
 
 ![testing triforce](./images/testing-triforce.png "Testing Triforce")
 - credit: the triforce image is a copyrighted symbol of Nintendo Corporation. 
