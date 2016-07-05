@@ -16,6 +16,7 @@ Table of Contents
     - [E2e Tests](#E2e Tests)
     - [Unit Tests](#Unit Tests)
   - [Part 3: The Testing Triforce in Practice](#The Triforce in Practice)
+    - [Where Do I Put My Files?](#Where Do I Put My Files)
     - [The Gherkin Comes First](#The Gherkin Comes First)
     - [Implement Step Definitions with Protractor](#Implement Step Definitions with Protractor)
     - [Implement E2e Tests in a Separate Protractor Config file](#Implement E2e Tests in a Separate Protractor Conf.js file)
@@ -37,6 +38,7 @@ Table of Contents
     - [Q. Do I *need* to use unit tests?](#Q3)
     - [Q. Do I *need* to use e2e tests?](#Q4)
     - [Q. When should I *NOT* use the Testing Triforce?](#Q5)
+    - [Q. Most Cucumber / BDD examples have a root level "features" folder. Why don't you follow this convention?](#Q6)
 
 
 -
