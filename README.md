@@ -1,6 +1,6 @@
 
+<img src="./images/cucumber.png" height="50" width="48">
 
-![cucumber](./images/cucumber.png){:height="24px" width="48px"}
 # The Front End Testing Triforce Guide
 
 A three-pronged approach for automated testing of front-end applications. 
