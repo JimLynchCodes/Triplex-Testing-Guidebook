@@ -69,7 +69,9 @@ It should be noted that the Testing Triforce is not something that is dependant 
 This document is meant to be a guide for implementing Triforce testing into your own project. Rather than be taken as gospel, the ideas expressed here are meant to convince you of the benefits of implementing these three types of automated testing. The prescribes methodoligies here have been tried a tested, but you are free to change things in your own case if you find it necessary to do so.
  
 ---
- 
+ <div name="The Three Types of Automated Tests"></div>
+## Part 2: The Three Types of Automated Tests
+
 <div name="The Triforce Diagram"></div>
 ## The Triforce Diagram
 
@@ -110,8 +112,7 @@ These are tests that do hit external endpoints. Normally, we set these up in a s
 Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance tests should not steal any thunder at all from the classic unit tests. Indeed, doing all that preparatory Protractor work and writing out the features in gherkin, makes it much easier to start unit testing because you have a clear direction of where you want to be. Unit tests are concerned with checking individual functions. These normally return a coverage report, and as always we aim for 100% coverage by unit tests. 
 
 
-<div name="The Three Types of Automated Tests"></div>
-## Part 2: The Three Types of Automated Tests
+
 --- 
 
 <div name="#Where Do I Put My Files"></div>
