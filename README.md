@@ -119,10 +119,10 @@ Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance
 <div name="Where Do I Put My Files"></div>
 ### Where Do I Put My Files? 
 
-<div name="Gherkin Comes First"></div>
+<div name="The Gherkin Comes First"></div>
 ### Gherkin Comes First
 
-<div name="Implement Step Definitions with Protractor Selenium Tests"></div>
+<div name="Implement Step Definitions with Protractor"></div>
 ### Implement Step Definitions with Protractor Selenium Tests
 
 <div name="Implement E2e Tests in a Separate Protractor Conf.js file"></div>
