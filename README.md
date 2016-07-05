@@ -33,7 +33,7 @@ Table of Contents
     - [Living Documentation](#Living Documentation)
   - [Part 5: Reporting](#Reporting)
     - [Generating Reports From the Codebase](#Generating Reports From the Codebase)
-    - [Meetings with "The Boss"](#Meetings with "The Boss")
+    - [Meetings with "The Boss"](#Meetings with The Boss)
     - [Sample Reports](#Sample Reports)
   - [Part 6: Random Things](#Random Things)
     - [Triforce Tester Certification](#Triforce Tester Certification)
