@@ -27,7 +27,7 @@ Table of Contents
     - [Everyone Reads the Gherkin, Dev's Change the Gherkin](#Everyone Reads, Devs Change)
     - [No Manual Testers](#No Manual Testers)
   - [Part 4: Additional Benefits of Triforce Development](#Additional Benefits of Triforce Development)
-    - [Beter Team COmmunication and Ubiquitous Language](#Beter Team COmmunication and Ubiquitous Language)
+    - [Better Team Communication and Ubiquitous Language](#Better Team Communication and Ubiquitous Language)
     - [The Requirements and Code Are Always In Sync](#The Requirements and Code Are Always In Sync)
     - [No Manual Testing](#No Manual Testing)
     - [Living Documentation](#Living Documentation)
@@ -150,8 +150,8 @@ We recommend a CI pipeline that will automatically run 1) your acceptance tests 
 <div name="Additional Benefits of Triforce Development"></div>
 ## Part 4: Additional Benefits of Triforce Development
 
-<div name="Better Team Communication & Ubiquitous Language"></div>
-### Better Team Communication & Ubiquitous Language
+<div name="Better Team Communication and Ubiquitous Language"></div>
+### Better Team Communication and Ubiquitous Language
 It is truly amazing how much gherkin feature files can bring a team together. 
 
 <div name="The Requirements and Code Are Always In Sync"></div>
