@@ -150,6 +150,21 @@ Cucumber reposrts, unit test reports, protractor reports(?)
 There are currently no questions in the FAQ section. PleASe ask a question by submitting an issue.
 
 
+<div name="Reporting"></div>
+## Part 5: Reporting
+A lot of programmers qould laugh at someone who told them they needed to create documentation for their code. Documentation takes time to write, quickly becomes out of sync with your code, and is just plan annoying for developers to write. Luckily, Triforce Testing puts tremendous focus on good reporting, since these are just the artifacts of running each set of tests for a given type. 
+
+
+<div name="Meetings with The Boss"></div>
+### Meetings with "The Boss"
+The leadership, project sponsors, owners, and bosses of you, the lead developer, want to know periodically that progress is being made towards completion of the project and that there is a clear path for the future ahead. That's perfectly acceptable. This is perfectly illustrated with a cucumber report such as [this one](http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-bootstrap.html). Once everyone's code is merged the script to generate the cucumber report is run again (or automatically run on your CI server and hosted to an internal url) you can just walk into the meeting with "the boss" with the two of you looking at the cucumber report. Ideally you want to say something like, "Last week we had 20 acceptance tests (aka gherkin scenarios) of 80 passing, 1 failing, and the rest unimplemented. Now week have 30 acceptance tests passing, 0 failing, and the rest unimplemented." Of course of accpetance test may be much for difficult and/ or time consuming to implement thatn another, and that does't really come thropugh too well in this report. However, this report tells you exactly what features were worked on in plain english language and whether it's working right now. If you're dealing with a more technical boss you can go into the actual methods of your code by going to your unit testing report such as this one or even your e2e reports like this one. If you have failing e2e tests that's kind of a bad thing so hopefully your e2e report is relatively boring. This is a great way to convey a ton of information; a complete snapshot of the project's development at any time. You can do this quickly and effectively and then talk about other things related to other coworkers, lunch, golf, etc. The boss can then refer back to these charts at any time after the meeting by visiting each corresponding url.
+
+
+<div name="#FAQ"></div>
+There are currently no questions in the FAQ section. Please ask a question by submitting an issue.
+
+
+
 
 ---
 
