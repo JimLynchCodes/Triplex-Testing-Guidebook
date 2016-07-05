@@ -37,7 +37,7 @@ Table of Contents
     - [Sample Reports](#Sample Reports)
   - [Part 6: Random Things](#Random Things)
     - [Triforce Tester Certification](#Triforce Tester Certification)
-  - [Part 6: Frequently Asked Questions](#FAQ)
+  - [Part 7: Frequently Asked Questions](#FAQ)
     - [Q. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
     - [Q. Do I *need* to use acceptance tests?](#Q2)
     - [Q. Do I *need* to use unit tests?](#Q3)
@@ -182,6 +182,7 @@ Cucumber reports, unit test reports, protractor reports(?)
 <div name="Random Things"></div>
 ## Part 6: Random Things
 
+<div name="Triforce Tester Certification"></div>
 ### Triforce Tester Certification
 If you've been practicing Triforce Testing Development for over a year and would like to try to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
 
