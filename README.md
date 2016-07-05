@@ -112,10 +112,11 @@ These are tests that do hit external endpoints. Normally, we set these up in a s
 Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance tests should not steal any thunder at all from the classic unit tests. Indeed, doing all that preparatory Protractor work and writing out the features in gherkin, makes it much easier to start unit testing because you have a clear direction of where you want to be. Unit tests are concerned with checking individual functions. These normally return a coverage report, and as always we aim for 100% coverage by unit tests. 
 
 
-
 --- 
+<div name="The Triforce in Practice"></div>
+## The Triforce in Practice
 
-<div name="#Where Do I Put My Files"></div>
+<div name="Where Do I Put My Files"></div>
 ### Where Do I Put My Files? 
 
 <div name="Gherkin Comes First"></div>
