@@ -110,24 +110,31 @@ These are tests that do hit external endpoints. Normally, we set these up in a s
 Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance tests should not steal any thunder at all from the classic unit tests. Indeed, doing all that preparatory Protractor work and writing out the features in gherkin, makes it much easier to start unit testing because you have a clear direction of where you want to be. Unit tests are concerned with checking individual functions. These normally return a coverage report, and as always we aim for 100% coverage by unit tests. 
 
 
-<div name="The Triforce in Practice"></div>
+<div name="The Three Types of Automated Tests"></div>
 ## Part 2: The Triforce in Practice
 --- 
 
-## Gherkin Comes First
+<div name="Where Do I Put My Files"></div>
+### Where Do I Put My Files? 
 
+<div name="Gherkin Comes First"></div>
+### Gherkin Comes First
 
-## Implement Step Definitions with Protractor Selenium Tests
+<div name="Implement Step Definitions with Protractor Selenium Tests"></div>
+### Implement Step Definitions with Protractor Selenium Tests
 
-## Implement E2e Tests in a Separate Protractor Conf.js file.
+<div name="Implement E2e Tests in a Separate Protractor Conf.js file"></div>
+### Implement E2e Tests in a Separate Protractor Conf.js file.
 
-## Write the actually code in the usual TDD style with unit tests is code while using the protractor tests and gherkin feature files as a guide for what the code should do.
+<div name="Write Unit Tests and Code TDD Style"></div>
+## Write Unit Tests and Code TDD Style 
+Write the actually code in the usual TDD style with unit tests is code while using the protractor tests and gherkin feature files as a guide for what the code should do.
 
+<div name="Deployment"></div>
 ## Deployment
 We recommend a CI pipeline that will automatically run 1) your acceptance tests protrator file, 2) your e2e tests protractor file, and 3) your karma unit tests file. If you don't have a CI server set up, you could always run these three tests manually. The key is that you trust these tests so that they will continue to be run and maintained as the development unfolds. 
 
-### Triforce Tester Certification
-If you've been practicing Triforce Testing Development for over a year and would like to try to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
+
 
 
 <div name="Additional Benefits of Triforce Development"></div>
@@ -161,6 +168,10 @@ A lot of programmers qould laugh at someone who told them they needed to create 
 <div name="Meetings with The Boss"></div>
 ### Meetings with "The Boss"
 The leadership, project sponsors, owners, and bosses of you, the lead developer, want to know periodically that progress is being made towards completion of the project and that there is a clear path for the future ahead. That's perfectly acceptable. This is perfectly illustrated with a cucumber report such as [this one](http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-bootstrap.html). Once everyone's code is merged the script to generate the cucumber report is run again (or automatically run on your CI server and hosted to an internal url) you can just walk into the meeting with "the boss" with the two of you looking at the cucumber report. Ideally you want to say something like, "Last week we had 20 acceptance tests (aka gherkin scenarios) of 80 passing, 1 failing, and the rest unimplemented. Now week have 30 acceptance tests passing, 0 failing, and the rest unimplemented." Of course of accpetance test may be much for difficult and/ or time consuming to implement thatn another, and that does't really come thropugh too well in this report. However, this report tells you exactly what features were worked on in plain english language and whether it's working right now. If you're dealing with a more technical boss you can go into the actual methods of your code by going to your unit testing report such as this one or even your e2e reports like this one. If you have failing e2e tests that's kind of a bad thing so hopefully your e2e report is relatively boring. This is a great way to convey a ton of information; a complete snapshot of the project's development at any time. You can do this quickly and effectively and then talk about other things related to other coworkers, lunch, golf, etc. The boss can then refer back to these charts at any time after the meeting by visiting each corresponding url.
+
+
+### Triforce Tester Certification
+If you've been practicing Triforce Testing Development for over a year and would like to try to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
 
 
 <div name="#FAQ"></div>
