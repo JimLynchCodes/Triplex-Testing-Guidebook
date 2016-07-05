@@ -24,15 +24,19 @@ Table of Contents
     - [Write Unit Tests and Code TDD Style](#Write Unit Tests and Code TDD Style)
     - [Deployment](#Deployment)
     - [Testing On Multiple Browsers](#Testing On Multiple Browsers)
-    - [Triforce Tester Certification](#Triforce Tester Certification)
+    - [Everyone Reads the Gherkin, Dev's Change the Gherkin](#Everyone Reads, Devs Change)
+    - [No Manual Testers](#No Manual Testers)
   - [Part 4: Additional Benefits of Triforce Development](#Additional Benefits of Triforce Development)
     - [Beter Team COmmunication and Ubiquitous Language](#Beter Team COmmunication and Ubiquitous Language)
     - [The Requirements and Code Are Always In Sync](#The Requirements and Code Are Always In Sync)
+    - [No Manual Testing](#No Manual Testing)
     - [Living Documentation](#Living Documentation)
   - [Part 5: Reporting](#Reporting)
     - [Generating Reports From the Codebase](#Generating Reports From the Codebase)
     - [Meetings with "The Boss"](#Meetings with "The Boss")
     - [Sample Reports](#Sample Reports)
+  - [Part 6: Random Things](#Random Things)
+    - [Triforce Tester Certification](#Triforce Tester Certification)
   - [Part 6: Frequently Asked Questions](#FAQ)
     - [Q. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
     - [Q. Do I *need* to use acceptance tests?](#Q2)
@@ -63,12 +67,14 @@ It should be noted that the Testing Triforce is not something that is dependant 
 <div name="This is a Guide"></div>
 ### This is a Guide
 This document is meant to be a guide for implementing Triforce testing into your own project. Rather than be taken as gospel, the ideas expressed here are meant to convince you of the benefits of implementing these three types of automated testing. The prescribes methodoligies here have been tried a tested, but you are free to change things in your own case if you find it necessary to do so.
-
+ 
+---
+ 
 <div name="The Triforce Diagram"></div>
 ## The Triforce Diagram
 
 ![testing triforce](./images/testing-triforce.png "Testing Triforce")
-- credit: the triforce image is a copyrighted symbol of Nintendo Corporation. 
+*credit: the triforce image is a copyrighted symbol of Nintendo Corporation.*
 
 The triforce is a symbol popularized by the video games franchise "The Legend of Zelda".
 
