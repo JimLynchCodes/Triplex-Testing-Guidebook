@@ -232,6 +232,9 @@ Cucumber reports, unit test reports, protractor reports(?)
 <div name="Sample Reports"></div>
 ### Sample Reports
 
+
+
+
 ---
 <div name="Random Things"></div>
 ## Part 6: Random Things
@@ -239,7 +242,7 @@ Cucumber reports, unit test reports, protractor reports(?)
 
 <div name="Laid Back Perfectionism"></div>
 ## Part 6: Laid Back Perfectionism
-There is a type of culture that is instilled in teams that are working well in triplex testing development. Code is an interesting thing because if it isn't "perfect" it's not yet finished. I say *perfect* in quotes because the word can have many different meanings. Some may consider code with no errors and that contains no bugs when it runs to be perfect. For some, perfect code has a type of aesthetic requirement or must be in a certain style, and still others will say it's perfect if anf only if all it's relevant tests from all three areas have been identified, written, and passing in all cases.  
+There is a type of culture that is instilled in teams that are working well in triplex testing development. Code is an interesting thing because if it isn't "perfect" it's not yet finished. I say *perfect* in quotes because the word can have many different meanings. Some may consider code with no errors and that contains no bugs when it runs to be perfect. For some, perfect code has a type of aesthetic requirement or must be in a certain style, and still others will say it's perfect if and only if all it's relevant tests from all three areas have been identified, written, and passing in all cases. "Laid back perfection" should be a mantra and part of the corporate culture. Obviously, humans are imperfect beings and at times make mistakes. The key is that there is a series of checks  and balances that prevents imperfect code from reaching the end of the pipeline, the users. The testing triforce acts as the team's ultimately safety net and acts as a safegaurd that only allows perfect code to be deployed. Thus, there is no need for developers to be in hyper-alert mode or to manually ensure that there are no bugs. Ideally, this results in perfect code being pushed live without headache or worry from the developer team.   
 
 
 <div name="Triforce Tester Certification"></div>
