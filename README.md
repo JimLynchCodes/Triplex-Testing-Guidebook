@@ -1,5 +1,5 @@
 
-# <img src="./images/nice-triforce.png" height="30"> ~ The Triplex Testing Guidebook ~ <img src="./images/nice-triforce.png" height="30">
+# <img src="./images/nice-triforce.png" height="30"> ~ The Triplex Software Testing Guidebook ~ <img src="./images/nice-triforce.png" height="30">
 
 A three-pronged approach to building great software with automated tests. 
 
