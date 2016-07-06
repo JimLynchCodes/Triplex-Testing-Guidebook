@@ -1,5 +1,5 @@
 
-# The Front End Testing Triforce Guide
+# <img src="./images/big-triforce.png" height="30"> The Front End Testing Triforce Guide
 
 A three-pronged approach to building great software with automated tests. 
 
@@ -10,7 +10,7 @@ Table of Contents
     - [History of the Testing Triforce](#history)
     - [Purpose of The Testing Triforce](#Purpose of The Testing Triforce)
     - [It's Not Specific Angular](#It's Not Specific Angular)
-    - [This is a Guide](#This is a Guide)
+    - [This is a Guide for Developing Great Software](#This is a Guide)
   - [Part 2: The Three Types of Automated Tests](#The Three Types of Automated Tests)
     - [The Triforce Diagram](#The Triforce Diagram)
     - [Acceptance Tests](#Acceptance Tests)
@@ -66,8 +66,8 @@ The testing triforce is meant to prescribe a way for writing three types of auto
 It should be noted that the Testing Triforce is not something that is dependant on the Angular library. It can be applied to really any project made from html, css, and javascript which can be tested with Protractor and JavaScript unit testing framework like Jasmine or Chai-Mocha. It can even be applied to other front-end platforms like .NET, Ios, Android, Java, Ruby, C++, etc. although you will need different tooling for that platform than what is discussed here. 
 
 <div name="This is a Guide"></div>
-### This is a Guide
-This document is meant to be a guide for implementing Triforce testing into your own project. Rather than be taken as gospel, the ideas expressed here are meant to convince you of the benefits of implementing these three types of automated testing. The prescribes methodoligies here have been tried a tested, but you are free to change things in your own case if you find it necessary to do so.
+### This is a Guide For Developing Great Software
+This document is meant to be a guide for implementing Triforce testing into your own project. Rather than be taken as gospel, the ideas expressed here are meant to convince you of the benefits of implementing these three types of automated testing. The prescribes methodoligies here have been tried a tested, but you are free to change things in your own case if you find it necessary to do so. Note that this is not a guide for writing or running any of the three test types (although you may find the sample config files and shell commands useful). Rather, this is a more meta guide on building great software by leveraging automated testing. 
  
 ---
  <div name="The Three Types of Automated Tests"></div>
