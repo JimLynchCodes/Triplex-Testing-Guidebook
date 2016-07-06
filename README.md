@@ -1,5 +1,5 @@
 
-# <img src="./images/big-triforce.png" height="30"> The Front End Testing Triforce Guide
+# <img src="./images/nice-triforce.png" height="30"> ~ The Triforce Testing Guidelines ~ <img src="./images/nice-triforce.png" height="30">
 
 A three-pronged approach to building great software with automated tests. 
 
@@ -23,7 +23,7 @@ Table of Contents
     - [Executing the Acceptance Tests](#Executing the Acceptance Tests)
     - [Implement E2e Tests in a Separate Protractor Config file](#Implement E2e Tests in a Separate Protractor Conf.js file)
     - [Write Unit Tests and Code TDD Style](#Write Unit Tests and Code TDD Style)
-    - [Deployment](#Deployment)
+    - [Notes on Deployment](#Deployment)
     - [Testing On Multiple Browsers](#Testing On Multiple Browsers)
     - [Everyone Reads the Gherkin, Dev's Change the Gherkin](#Everyone Reads, Devs Change)
     - [No Manual Testers](#No Manual Testers)
@@ -77,6 +77,7 @@ This document is meant to be a guide for implementing Triforce testing into your
 ### The Triforce Diagram
 
 ![testing triforce](./images/testing-triforce.png "Testing Triforce")
+
 *credit: the triforce image is a copyrighted symbol of Nintendo Corporation.*
 
 The triforce is a symbol popularized by the video games franchise "The Legend of Zelda".
@@ -180,7 +181,7 @@ And then run it like this:
 You can put .spec.js files anywhere in the src/ folder and they will automatically be picked up when you run karma. 
 
 <div name="Deployment"></div>
-### Deployment
+### Notes on Deployment
 We recommend a CI pipeline that will automatically run 1) your acceptance tests protrator file, 2) your e2e tests protractor file, and 3) your karma unit tests file. If you don't have a CI server set up, you could always run these three tests manually. The key is that you trust these tests so that they will continue to be run and maintained as the development unfolds. 
 
 <div name="Testing On Multiple Browsers"></div>
