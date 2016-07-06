@@ -187,8 +187,12 @@ We recommend a CI pipeline that will automatically run 1) your acceptance tests 
 
 <div name="Testing On Multiple Browsers"></div>
 ### Testing On Multiple Browsers
-Sauce Labs is basically the ones running the show in this area, and connecting to Sauce is even built into the api of Protractor!
+One key advantage of automated browser testing in that we can take the script we've developed locally and execute it on virtually *any* browser, and we can even do multiple browsers simultaneously. The for-profit company *Sauce Labs* basically runs the show in this area, and connecting to Sauce is even built into the api of Protractor! Simply update your protractor config file with this block to the service instead of running the Protractor tests manually *(note: you will need your replace the constants with your own Sauce Labs credentials)*:
+`
 
+
+
+`
 
 <div name="Everyone Reads, Devs Change"></div>
 ### Everyone Reads the Gherkin, Dev's Change the Gherkin
@@ -196,7 +200,7 @@ Because the feature files are somewhat scattered around the project's directory 
 
 <div name="No Manual Testers"></div>
 ### No Manual Testers
-Too often large development companies have qa teams that are just squads of manual testers. Manual testing should be though of as the enemy and avoided. Anything worth testing manually can and should be automated with Protractor. If you currently have manual testers, teach them the ways of Protractor. 
+Too often large development companies have qa teams that are just squads of manual testers. Manual testing should be though of as the enemy and avoided. Anything worth testing manually can and should be automated with Protractor. If you currently have manual testers, teach them the ways of Protractor so that can contribute to the automated testing effort. 
 
 ---
 
@@ -205,7 +209,7 @@ Too often large development companies have qa teams that are just squads of manu
 
 <div name="Better Team Communication and Ubiquitous Language"></div>
 ### Better Team Communication and Ubiquitous Language
-It is truly amazing how much gherkin feature files can bring a team together. 
+It is truly amazing how much gherkin feature files can bring a team together. The Given-When-Then-And-But syntax is excellent for describing scenarios and conveying what the software is acutally supposed to accomplish without being concerned with how it is implemented. Having the visual reports to refer to are extremely helpful to all the non-programmers who often have trouble figuring out what's been done already, what's in progess, and what's still on the back burner. 
 
 <div name="The Requirements and Code Are Always In Sync"></div>
 ### The Requirements and Code Are Always In Sync
@@ -213,7 +217,7 @@ One of the really nice things about using gherkin feature files instead of havin
 
 <div name="No Manual Testing"></div>
 ### No Manual Testing
-Manual testing can be a huge drain on time and resources. Of course you may not remove manual testing *entirely*, but not having a whole QA team of manual testers and shortening the QA time can be hugely beneficial to an organization in terms of saving potentislly burned cash and being more nimble with changes, bug fixes, and releases. 
+Manual testing can be a huge drain on time and resources. Of course you may not remove manual testing *entirely*, but not having a whole QA team of manual testers and shortening the QA time can be hugely beneficial to an organization in terms of saving potentislly burned cash and being more nimble with changes, bug fixes, and releases. In general, whenever you see an opportunity for manual testing instead try to write an automated test for it. 
 
 <div name="Living Documentation"></div>
 ### Living Documentation
@@ -228,6 +232,7 @@ Cucumber reports, unit test reports, protractor reports(?)
 
 <div name="Meetings with The Boss"></div>
 ### Meetings with "The Boss"
+The leadership, project sponsors, owners, and bosses of you, the lead developer, want to know periodically that progress is being made towards completion of the project and that there is a clear path for the future ahead. That's perfectly acceptable. This is perfectly illustrated with a cucumber report such as [this one](http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-bootstrap.html). Once everyone's code is merged the script to generate the cucumber report is run again (or automatically run on your CI server and hosted to an internal url) you can just walk into the meeting with "the boss" with the two of you looking at the cucumber report. Ideally you want to say something like, "Last week we had 20 acceptance tests (aka gherkin scenarios) of 80 passing, 1 failing, and the rest unimplemented. Now week have 30 acceptance tests passing, 0 failing, and the rest unimplemented." Of course of accpetance test may be much for difficult and/ or time consuming to implement thatn another, and that does't really come thropugh too well in this report. However, this report tells you exactly what features were worked on in plain english language and whether it's working right now. If you're dealing with a more technical boss you can go into the actual methods of your code by going to your unit testing report such as this one or even your e2e reports like this one. If you have failing e2e tests that's kind of a bad thing so hopefully your e2e report is relatively boring. This is a great way to convey a ton of information; a complete snapshot of the project's development at any time. You can do this quickly and effectively and then talk about other things related to other coworkers, lunch, golf, etc. The boss can then refer back to these charts at any time after the meeting by visiting each corresponding url.
 
 <div name="Sample Reports"></div>
 ### Sample Reports
