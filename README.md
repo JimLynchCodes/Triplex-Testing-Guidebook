@@ -20,6 +20,7 @@ Table of Contents
     - [Where Do I Put My Files?](#Where Do I Put My Files)
     - [The Gherkin Comes First](#The Gherkin Comes First)
     - [Implement Step Definitions with Protractor](#Implement Step Definitions with Protractor)
+    - [Executing the Acceptance Tests](#Executing the Acceptance Tests)
     - [Implement E2e Tests in a Separate Protractor Config file](#Implement E2e Tests in a Separate Protractor Conf.js file)
     - [Write Unit Tests and Code TDD Style](#Write Unit Tests and Code TDD Style)
     - [Deployment](#Deployment)
@@ -115,22 +116,68 @@ Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance
 --- 
 <div name="The Triforce in Practice"></div>
 ## Part 3: The Triforce in Practice
+This section provides some advice for using the Triforce in Practice.
 
 <div name="Where Do I Put My Files"></div>
 ### Where Do I Put My Files? 
+Most experienced SPA developers agree that at a high level a feature-based directory structure scales best and that parallel directory structures should be avoided. Tests that can be directly attributedto certain classes or features should be near them. We recommend putting a *feature* directory in the root directory of that particular feature. Then put the .feature file and step definitions (optionally in a step_definitions subfolder) inside of the new directory. For units tests I like to keep the .spec.js test file directly next to the correponsing .js file. Since our acceptance tests are the selenium / Protractor tests heavily tied to the features, the E2e tests can be more general. For example, an e2e test could just check that a database endpoint returns *something.* This has nothing to do with any particular feature, and for this reason it's customary to have an e2e folder on the same level as the src folder which stores all of the e2e tests. In JavaScript a good build script can sort out the feature and step definition files so it's fine to put your acceptance tests and unit tests right in the src folder with the relevant files for that particular feature. As a final note on this topic I'll mention that if you do decide to have *parallel directory trees* and your apps grows large enough you (or your developers) are going to be scrolling like crazy, losing track of files, and possibly considering giving up on testing. Make good choices about your directory structure.                                 
 
 <div name="The Gherkin Comes First"></div>
 ### Gherkin Comes First
+Is a piece of software really anything more than the features it provides? What better way to begin describing a project than by describing gherkin features and scenarios? And if we are discussing them, we might as well write them into .feature files because then they can be stored in version control, referred back to later, and even executed by command shell.  
+
+We recommend running your gherkin JavaScript files through Protractor by setting the framework to "".
+Here is an example of a protractor.conf file:
+
+`
+
+`
+
+Add this file to your project and then install the necessary modules
+
+``
+``
+
+Now you should be able to run gherkin tests like this:
+` `
 
 <div name="Implement Step Definitions with Protractor"></div>
 ### Implement Step Definitions with Protractor Selenium Tests
+If you are using the protractor config file above then you might notice that for the step definition files it's only looking for .steps.js files. This means we can put them anywhere in our project, and we don't need any *step_definitions* folders (but if you think it makes things more readable go ahead and use them). The scenarios will almost always be from a user's point of view, and so it naturally follows to automate the tests from the user's point of view. This is why we write low level step definitions with protractor api. Your scenarios should just describe things that should happen, and in the protractor tests you can *expect* those things to happen after clicking (or interacting with in another way) some element on the page. Also, notice that these tests are still using the underlying functions of the application and so the protractor tests are indirectly testing individual functions of the application. However, because this protractor tests check the application in a *black box* fashion, when errors fail it's tough to find the root cause of issues from these tests alone. 
+
 
 <div name="Implement E2e Tests in a Separate Protractor Conf.js file"></div>
 ### Implement E2e Tests in a Separate Protractor Conf.js file.
+This section is purposely put before "write the production code" because it should come first. Unless you have a really hazy idea of what you're building (red flag), you should at least know what external resources you are connecing to. Even if the backend has not been finished yet, you can still set up the e2e test firing away at it from day one, and simply let it fail. Comment it out if it bothers you, and then as soon as that endpoint is ready add that e2e test back in. Some developers get flustered and afraid when they think about writing e2e tests, but actually these are the easiest of all.
+
+Here is a sample protractor file for running e2e tests:
+`
+
+
+`
+
+You can run this with this command:
+`     `
+
 
 <div name="Write Unit Tests and Code TDD Style"></div>
 ### Write Unit Tests and Code TDD Style 
-Write the actually code in the usual TDD style with unit tests is code while using the protractor tests and gherkin feature files as a guide for what the code should do.
+Write the actually code in the usual TDD style with unit tests is code while using the protractor tests and gherkin feature files as a guide for what the code should do. For modern JavaScript development, karma seems to have gained a stronghold as the most popular unit test runner. Many scaffolded pojects have support for unit testing out of the box, but they are really just providing you with a karma.conf.js file. You could make this file yourself or change your current one as you like. 
+
+Here is an example of a karma.conf.js file:
+`
+
+
+
+`
+
+Don't forget to install karma:
+`     `
+
+And then run it like this:
+`      `
+
+You can put .spec.js files anywhere in the src/ folder and they will automatically be picked up when you run karma. 
 
 <div name="Deployment"></div>
 ### Deployment
@@ -138,12 +185,16 @@ We recommend a CI pipeline that will automatically run 1) your acceptance tests 
 
 <div name="Testing On Multiple Browsers"></div>
 ### Testing On Multiple Browsers
+Sauce Labs is basically the ones running the show in this area, and connecting to Sauce is even built into the api of Protractor!
+
 
 <div name="Everyone Reads, Devs Change"></div>
 ### Everyone Reads the Gherkin, Dev's Change the Gherkin
+Because the feature files are somewhat scattered around the project's directory structure it can be a little overwhelming for a non-developer to pull the project repo just to read the feature files. The key is to keep the feature files easily readable and accessible by all. Therefore, all non-programmers should be referring to the cucumber reports that are automatically generated. These will show all of the features and scenarios in a nice, collapsable format. If they wish to chhange something it should be discussing with the programmers who then make a change to the feature file in question and push that up to the git repository which then updates the hosted cucumber reports.
 
 <div name="No Manual Testers"></div>
 ### No Manual Testers
+Too often large development companies have qa teams that are just squads of manual testers. Manual testing should be though of as the enemy and avoided. Anything worth testing manually can and should be automated with Protractor. If you currently have manual testers, teach them the ways of Protractor. 
 
 ---
 
@@ -160,6 +211,7 @@ One of the really nice things about using gherkin feature files instead of havin
 
 <div name="No Manual Testing"></div>
 ### No Manual Testing
+Manual testing can be a huge drain on time and resources. Of course you may not remove manual testing *entirely*, but not having a whole QA team of manual testers and shortening the QA time can be hugely beneficial to an organization in terms of saving potentislly burned cash and being more nimble with changes, bug fixes, and releases. 
 
 <div name="Living Documentation"></div>
 ### Living Documentation
