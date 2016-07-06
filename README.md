@@ -1,5 +1,5 @@
 
-# <img src="./images/nice-triforce.png" height="30"> ~ The Triforce Testing Guidelines ~ <img src="./images/nice-triforce.png" height="30">
+# <img src="./images/nice-triforce.png" height="30"> ~ The Triplex Testing Guidebook ~ <img src="./images/nice-triforce.png" height="30">
 
 A three-pronged approach to building great software with automated tests. 
 
@@ -37,6 +37,7 @@ Table of Contents
     - [Meetings with "The Boss"](#Meetings with The Boss)
     - [Sample Reports](#Sample Reports)
   - [Part 6: Random Things](#Random Things)
+    - [Laid Back Perfectionism](#Laid Back Perfectionism)
     - [Triforce Tester Certification](#Triforce Tester Certification)
   - [Part 7: Frequently Asked Questions](#FAQ)
     - [Q. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
@@ -234,6 +235,12 @@ Cucumber reports, unit test reports, protractor reports(?)
 ---
 <div name="Random Things"></div>
 ## Part 6: Random Things
+
+
+<div name="Laid Back Perfectionism"></div>
+## Part 6: Laid Back Perfectionism
+There is a type of culture that is instilled in teams that are working well in triplex testing development. Code is an interesting thing because if it isn't "perfect" it's not yet finished. I say *perfect* in quotes because the word can have many different meanings. Some may consider code with no errors and that contains no bugs when it runs to be perfect. For some, perfect code has a type of aesthetic requirement or must be in a certain style, and still others will say it's perfect if anf only if all it's relevant tests from all three areas have been identified, written, and passing in all cases.  
+
 
 <div name="Triforce Tester Certification"></div>
 ### Triforce Tester Certification
