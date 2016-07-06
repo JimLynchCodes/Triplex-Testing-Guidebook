@@ -1,7 +1,7 @@
 
 # The Front End Testing Triforce Guide
 
-A three-pronged approach for automated testing of front-end applications. 
+A three-pronged approach to building great software with automated tests. 
 
 ---
 
