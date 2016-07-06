@@ -10,7 +10,7 @@ Table of Contents
     - [History of the Testing Triforce](#history)
     - [Purpose of The Testing Triforce](#Purpose of The Testing Triforce)
     - [It's Not Specific Angular](#It's Not Specific Angular)
-    - [This is a Guide for Developing Great Software](#This is a Guide)
+    - [This is a Guide for Developing Software](#This is a Guide)
   - [Part 2: The Three Types of Automated Tests](#The Three Types of Automated Tests)
     - [The Triforce Diagram](#The Triforce Diagram)
     - [Acceptance Tests](#Acceptance Tests)
