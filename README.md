@@ -19,6 +19,7 @@ Table of Contents
   - [Part 3: The Testing Triforce in Practice](#The Triforce in Practice)
     - [Where Do I Put My Files?](#Where Do I Put My Files)
     - [The Gherkin Comes First](#The Gherkin Comes First)
+    - [Executing The Gherkin Scripts](#Executing The Gherkin Scripts)
     - [Implement Step Definitions with Protractor](#Implement Step Definitions with Protractor)
     - [Executing the Acceptance Tests](#Executing the Acceptance Tests)
     - [Implement E2e Tests in a Separate Protractor Config file](#Implement E2e Tests in a Separate Protractor Conf.js file)
@@ -48,7 +49,7 @@ Table of Contents
     - [Q. Most Cucumber / BDD examples have a root level "features" folder. Why don't you follow this convention?](#Q6)
 
 
--
+
 
 <div name="Intro to Unit Testing"></div>
 ## Part 1: Intro to The Testing Triforce
@@ -126,22 +127,75 @@ Most experienced SPA developers agree that at a high level a feature-based direc
 
 <div name="The Gherkin Comes First"></div>
 ### Gherkin Comes First
-Is a piece of software really anything more than the features it provides? What better way to begin describing a project than by describing gherkin features and scenarios? And if we are discussing them, we might as well write them into .feature files because then they can be stored in version control, referred back to later, and even executed by command shell.  
+Is a piece of software really anything more than the features it provides? What better way to begin describing a project than by describing gherkin features and scenarios? And if we are discussing them, we might as well write them into .feature files because then they can be stored in version control, referred back to later, and even executed by command shell. Here's an example of some Gherkin **code**:
+```
+Feature: Display Weather
+    In order to see the current temperature on the screen
+    As a user of the app
+    I want to see the weather on the screen wehn the page loads.
 
+    Scenario: Page first loads
+      Given I navigate to this page
+      When the page first loads
+      Then I should see the current temperature displayed.
+```
+
+Looks like plan English right? That's the beauty of it. If you start thinking about the vision you have of your application in terms of features and scenarios it help in a number of ways:
+
+- It fleshes out many of situations, and a lot of unknowns and what would be questions down the road are hammered out early. 
+- Because it's written down it's not just in one person's head or spoken aloud in a meeting and forgotten. This also makes it clear when two people have different interpretations of something (usually) and helps to clear up understanding.
+- Because it's Gherkin syntax, these scenarios can be *executed* to ensure they always pass for the latest build.
+- It gives some type of benchmark for progress on the project, scope and timeline estimation, and exposes potentially difficult issues to solve early.
+
+
+<div name="Executing The Gherkin Scripts"></div>
+### Executing The Gherkin Scripts
 We recommend running your gherkin JavaScript files through Protractor by setting the framework to "".
-Here is an example of a protractor.conf file:
+Here is an example of a protractor config file that runs the cucumberjs framework:
 
-`
+*acceptance-tests.config.js*
+```
+'use strict';
 
-`
+// An example configuration file.
+exports.config = {
+  // The address of a running selenium server.
+  // seleniumAddress: 'http://localhost:4444/wd/hub',
+  //seleniumServerJar: deprecated, this should be set on node_modules/protractor/config.json
 
+  framework: 'custom',
+  frameworkPath: require.resolve('protractor-cucumber-framework'),
+
+  // Capabilities to be passed to the webdriver instance.
+  capabilities: {
+    'browserName': 'chrome'
+  },
+  
+  resultJsonOutputFile: 'cucumber-report/report-output.txt',
+
+  baseUrl: 'http://localhost:3000',
+
+  specs: [paths.features + 'src/**/*.feature'],
+
+  cucumberOpts: {
+    format: 'pretty',
+    require: 'src/**/*.step.js'
+  },
+
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 25000
+    //   showColors: true,
+  }
+
+};
+
+```
 Add this file to your project and then install the necessary modules
 
-``
-``
+` npm install protractor-cucumber-framework --save-dev`
 
 Now you should be able to run gherkin tests like this:
-` `
+`./node_modules/protractor/bin/protractor acceptance-tests.config.js`
 
 <div name="Implement Step Definitions with Protractor"></div>
 ### Implement Step Definitions with Protractor Selenium Tests
@@ -153,14 +207,51 @@ If you are using the protractor config file above then you might notice that for
 This section is purposely put before "write the production code" because it should come first. Unless you have a really hazy idea of what you're building (red flag), you should at least know what external resources you are connecing to. Even if the backend has not been finished yet, you can still set up the e2e test firing away at it from day one, and simply let it fail. Comment it out if it bothers you, and then as soon as that endpoint is ready add that e2e test back in. Some developers get flustered and afraid when they think about writing e2e tests, but actually these are the easiest of all.
 
 Here is a sample protractor file for running e2e tests:
-`
+
+*e2e-tests.config.js*
+```
+'use strict';
+
+//if (process.env.TRAVIS) {
+// config.sauceUser = process.env.SAUCE_USERNAME;
+//  config.sauceKey = process.env.SAUCE_ACCESS_KEY;
+//  config.capabilities = {
+//    'browserName': 'chrome',
+//    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+//    'build': process.env.TRAVIS_BUILD_NUMBER
+//  };
+// }
 
 
-`
+// An example configuration file.
+exports.config = {
+  // The address of a running selenium server.
+  //seleniumAddress: 'http://localhost:4444/wd/hub',
+  //seleniumServerJar: deprecated, this should be set on node_modules/protractor/config.json
+
+  // Capabilities to be passed to the webdriver instance.
+  capabilities: {
+    'browserName': 'chrome'
+  },
+  
+  resultJsonOutputFile: 'e2e/e2e-report.json',
+
+  baseUrl: 'http://localhost:3000',
+
+  // Spec patterns are relative to the current working directory when
+  // protractor is called.
+  specs: ['src/**/*.js'],
+
+  // Options to be passed to Jasmine-node.
+  jasmineNodeOpts: {
+   showColors: false,
+    defaultTimeoutInterval: 30000
+  }
+};
+```
 
 You can run this with this command:
-`     `
-
+`./node_modules/protractor/bin/protractor e2e-tests.config.js`
 
 <div name="Write Unit Tests and Code TDD Style"></div>
 ### Write Unit Tests and Code TDD Style 
@@ -174,7 +265,7 @@ Here is an example of a karma.conf.js file:
 `
 
 Don't forget to install karma:
-`     `
+`npm install karma --save-dev`
 
 And then run it like this:
 `      `
