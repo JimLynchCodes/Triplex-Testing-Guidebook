@@ -428,7 +428,7 @@ Sadly, many companies simply don't take automated seriously enough.  If your com
 
 <div name="Triforce Tester Certification"></div>
 ### Triforce Tester Certification
-If you've been practicing Triforce Testing Development for over a year and would like to try to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
+If you've been practicing Triforce Testing Development for over a year and would like to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
 
 ---
 
