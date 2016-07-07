@@ -20,9 +20,9 @@ Table of Contents
     - [Where Do I Put My Files?](#Where Do I Put My Files)
     - [The Gherkin Comes First](#The Gherkin Comes First)
     - [Executing The Gherkin Scripts](#Executing The Gherkin Scripts)
-    - [Implement Step Definitions with Protractor](#Implement Step Definitions with Protractor)
     - [Executing the Acceptance Tests](#Executing the Acceptance Tests)
-    - [Implement E2e Tests in a Separate Protractor Config file](#Implement E2e Tests in a Separate Protractor Conf.js file)
+    - [Implementing Step Definitions with Protractor](#Implementing Step Definitions with Protractor)
+    - [Implementing E2e Tests in a Separate Protractor Config file](#Implementing E2e Tests in a Separate Protractor Conf.js file)
     - [Write Unit Tests and Code TDD Style](#Write Unit Tests and Code TDD Style)
     - [Notes on Deployment](#Deployment)
     - [Testing On Multiple Browsers](#Testing On Multiple Browsers)
@@ -189,6 +189,11 @@ exports.config = {
 };
 
 ```
+
+<div name="Executing the Acceptance Tests"></div>
+### Executing the Acceptance Tests
+The ability to run the acceptance tests through the command line is what sets apart Gherkin from just typing out requirements and user stories into Jira or Trello. Although vitally important to the triplex testing process, executing your feature files is actually not that hard. 
+
 Add this file to your project and then install the necessary modules
 
 ` npm install protractor-cucumber-framework --save-dev`
@@ -196,13 +201,14 @@ Add this file to your project and then install the necessary modules
 Now you should be able to run gherkin tests like this:
 `./node_modules/protractor/bin/protractor acceptance-tests.config.js`
 
-<div name="Implement Step Definitions with Protractor"></div>
-### Implement Step Definitions with Protractor Selenium Tests
+<div name="Implementing Step Definitions with Protractor"></div>
+### Implementing Step Definitions with Protractor Selenium Tests
 If you are using the protractor config file above then you might notice that for the step definition files it's only looking for .steps.js files. This means we can put them anywhere in our project, and we don't need any *step_definitions* folders (but if you think it makes things more readable go ahead and use them). The scenarios will almost always be from a user's point of view, and so it naturally follows to automate the tests from the user's point of view. This is why we write low level step definitions with protractor api. Your scenarios should just describe things that should happen, and in the protractor tests you can *expect* those things to happen after clicking (or interacting with in another way) some element on the page. Also, notice that these tests are still using the underlying functions of the application and so the protractor tests are indirectly testing individual functions of the application. However, because this protractor tests check the application in a *black box* fashion, when errors fail it's tough to find the root cause of issues from these tests alone. 
 
 
-<div name="Implement E2e Tests in a Separate Protractor Conf.js file"></div>
-### Implement E2e Tests in a Separate Protractor Conf.js file.
+
+<div name="Implementing E2e Tests in a Separate Protractor Conf.js file"></div>
+### Implementing E2e Tests in a Separate Protractor Conf.js file.
 This section is purposely put before "write the production code" because it should come first. Unless you have a really hazy idea of what you're building (red flag), you should at least know what external resources you are connecing to. Even if the backend has not been finished yet, you can still set up the e2e test firing away at it from day one, and simply let it fail. Comment it out if it bothers you, and then as soon as that endpoint is ready add that e2e test back in. Some developers get flustered and afraid when they think about writing e2e tests, but actually these are the easiest of all.
 
 Here is a sample protractor file for running e2e tests:
