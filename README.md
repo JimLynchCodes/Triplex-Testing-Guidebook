@@ -157,7 +157,6 @@ Here is an example of a protractor config file that runs the cucumberjs framewor
 ```
 'use strict';
 
-// An example configuration file.
 exports.config = {
   // The address of a running selenium server.
   // seleniumAddress: 'http://localhost:4444/wd/hub',
@@ -166,7 +165,6 @@ exports.config = {
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 
-  // Capabilities to be passed to the webdriver instance.
   capabilities: {
     'browserName': 'chrome'
   },
@@ -212,24 +210,10 @@ Here is a sample protractor file for running e2e tests:
 ```
 'use strict';
 
-//if (process.env.TRAVIS) {
-// config.sauceUser = process.env.SAUCE_USERNAME;
-//  config.sauceKey = process.env.SAUCE_ACCESS_KEY;
-//  config.capabilities = {
-//    'browserName': 'chrome',
-//    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-//    'build': process.env.TRAVIS_BUILD_NUMBER
-//  };
-// }
-
-
-// An example configuration file.
 exports.config = {
-  // The address of a running selenium server.
   //seleniumAddress: 'http://localhost:4444/wd/hub',
   //seleniumServerJar: deprecated, this should be set on node_modules/protractor/config.json
 
-  // Capabilities to be passed to the webdriver instance.
   capabilities: {
     'browserName': 'chrome'
   },
@@ -238,11 +222,8 @@ exports.config = {
 
   baseUrl: 'http://localhost:3000',
 
-  // Spec patterns are relative to the current working directory when
-  // protractor is called.
   specs: ['src/**/*.js'],
 
-  // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {
    showColors: false,
     defaultTimeoutInterval: 30000
@@ -279,11 +260,18 @@ We recommend a CI pipeline that will automatically run 1) your acceptance tests 
 <div name="Testing On Multiple Browsers"></div>
 ### Testing On Multiple Browsers
 One key advantage of automated browser testing in that we can take the script we've developed locally and execute it on virtually *any* browser, and we can even do multiple browsers simultaneously. The for-profit company *Sauce Labs* basically runs the show in this area, and connecting to Sauce is even built into the api of Protractor! Simply update your protractor config file with this block to the service instead of running the Protractor tests manually *(note: you will need your replace the constants with your own Sauce Labs credentials)*:
-`
 
-
-
-`
+```
+if (process.env.TRAVIS) {
+  config.sauceUser = process.env.SAUCE_USERNAME;
+  config.sauceKey = process.env.SAUCE_ACCESS_KEY;
+  config.capabilities = {
+    'browserName': 'chrome',
+    'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
+    'build': process.env.TRAVIS_BUILD_NUMBER
+  };
+ }
+```
 
 <div name="Everyone Reads, Devs Change"></div>
 ### Everyone Reads the Gherkin, Dev's Change the Gherkin
