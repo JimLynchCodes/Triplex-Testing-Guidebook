@@ -392,7 +392,7 @@ For Angular (and pretty much all front-end applications) code coverage is done w
 
 <img src="./images/unit-test-report-directory-view.png">
 
-<img src="./images/unit-test-report-file-view.png">
+<img src="./images/unit-test-report-file-view_js.png">
 
 
 Example of an e2e report: I haven't found a nice way to visualize this yet, but the e2e protractor script does output json reporting to a file:
