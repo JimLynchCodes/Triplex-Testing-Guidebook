@@ -9,7 +9,7 @@ Table of Contents
   - [Part 1: Intro to The Testing Triplex](#Intro to The Testing Triplex)
     - [History of the Testing Triplex](#history)
     - [Purpose of The Testing Triplex](#Purpose of The Testing Triplex)
-    - [It's Not Specific Angular](#It's Not Specific Angular)
+    - [It's Not Specific To Angular](#It's Not Specific To Angular)
     - [This is a Guide for Developing Software](#This is a Guide)
   - [Part 2: The Three Types of Automated Tests](#The Three Types of Automated Tests)
     - [The Triplex Diagram](#The Triplex Diagram)
@@ -66,8 +66,8 @@ The Testing Triplex phrase was coined by Jim Lynch. While working as an angularJ
 
 The testing triplex is meant to prescribe a way for writing three types of automated tests: acceptance tests, e2e tests, and unit tests, but even more than that it builds on the test-first theories of TDD. Thus, the testing triplex becomes a tao, or way of developing software where the result is truly transparent, agile, and well-done. This guide provides a set of instructions for developing with The Triplex Testing mindset, but it is up to you to find the tao on your own.
 
-<div name="It's Not Specific Angular"></div>
-### It's Not Specific Angular
+<div name="It's Not SpecificTo Angular"></div>
+### It's Not Specific To Angular
 It should be noted that the Testing Triplex is not something that is dependant on the Angular library. It can be applied to really any project made from html, css, and javascript which can be tested with Protractor and JavaScript unit testing framework like Jasmine or Chai-Mocha. It can even be applied to other front-end platforms like .NET, Ios, Android, Java, Ruby, C++, etc. although you will need different tooling for that platform than what is discussed here. 
 
 <div name="This is a Guide"></div>
