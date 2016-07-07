@@ -238,18 +238,70 @@ You can run this with this command:
 ### Write Unit Tests and Code TDD Style 
 Write the actually code in the usual TDD style with unit tests is code while using the protractor tests and gherkin feature files as a guide for what the code should do. For modern JavaScript development, karma seems to have gained a stronghold as the most popular unit test runner. Many scaffolded pojects have support for unit testing out of the box, but they are really just providing you with a karma.conf.js file. You could make this file yourself or change your current one as you like. 
 
-Here is an example of a karma.conf.js file:
-`
+Here is an example of a karma configuration file:
 
+*unit-tests.config.js*
+```
+module.exports = function(config) {
 
+  var configuration = {
+    files: listFiles(),
 
-`
+    singleRun: true,
+
+    autoWatch: false,
+
+    ngHtml2JsPreprocessor: {
+      stripPrefix: conf.paths.src + '/',
+      moduleName: 'icpComp'
+    },
+
+    logLevel: 'WARN',
+
+    frameworks: ['phantomjs-shim', 'jasmine', 'angular-filesort'],
+
+    angularFilesort: {
+      whitelist: [path.join(conf.paths.src, '/**/!(*.html|*.spec|*.mock).js')]
+    },
+
+    browsers : ['PhantomJS'],
+
+    plugins : [
+      'karma-phantomjs-launcher',
+      'karma-angular-filesort',
+      'karma-phantomjs-shim',
+      'karma-coverage',
+      'karma-jasmine',
+      'karma-ng-html2js-preprocessor'
+    ],
+
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
+
+    reporters: ['progress'],
+
+    proxies: {
+      '/assets/': path.join('/base/', conf.paths.src, '/assets/')
+    }
+  };
+
+  configuration.preprocessors = {};
+  pathSrcHtml.forEach(function(path) {
+    configuration.preprocessors[path] = ['ng-html2js'];
+  });
+
+  config.set(configuration);
+};
+
+```
 
 Don't forget to install karma:
 `npm install karma --save-dev`
 
 And then run it like this:
-`      `
+`karma start unit-tests.config.js`
 
 You can put .spec.js files anywhere in the src/ folder and they will automatically be picked up when you run karma. 
 
@@ -316,7 +368,47 @@ The leadership, project sponsors, owners, and bosses of you, the lead developer,
 <div name="Sample Reports"></div>
 ### Sample Reports
 
+Example of a cucumberjs acceptance tests report:
 
+Cucumber reports are usually interactive an expandable. You can play with a [live demo here](http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-bootstrap.html).
+
+<img src="./cucumber-report-screenshot.png">
+
+
+Example of a unit testing coverage report:
+For Angular (and pretty much all front-end applications) code coverage is done with the *Istabul* library, and you only need focus on reading the report: 
+
+<img src="./unit-test-report-directory-view.png">
+
+<img src="./unit-test-report-file-view.png">
+
+
+Example of an e2e report: I haven't found a nice way to visualize this yet, but the e2e protractor script does output json reporting to a file:
+
+```
+[
+  {
+    "description": "should include jumbotron with correct data",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 1198
+  },
+  {
+    "description": "should do nothing",
+    "assertions": [
+      {
+        "passed": false,
+        "errorMsg": "Expected 'some stuff' to equal 'oh,  whoops'.",
+        "stackTrace": "Error: Expected 'some stuff' to equal 'oh,  whoops'.\n    at new jasmine.ExpectationResult (/Users/jameslynch/gits/ng-nj.org/node_modules/gulp-protractor/node_modules/protractor/node_modules/minijasminenode/lib/jasmine-1.3.1.js:137:32)\n    at [object Object].<anonymous> (/Users/jameslynch/gits/ng-nj.org/node_modules/gulp-protractor/node_modules/protractor/node_modules/minijasminenode/lib/jasmine-1.3.1.js:1349:29)\n    at [object Object].toEqual (/Users/jameslynch/gits/ng-nj.org/node_modules/gulp-protractor/node_modules/protractor/node_modules/jasminewd/index.js:248:11)\n    at [object Object].<anonymous> (/Users/jameslynch/gits/ng-nj.org/e2e/main.spec.js:22:26)\n    at /Users/jameslynch/gits/ng-nj.org/node_modules/gulp-protractor/node_modules/protractor/node_modules/jasminewd/index.js:94:14\n    at [object Object].promise.ControlFlow.runInFrame_ (/Users/jameslynch/gits/ng-nj.org/node_modules/gulp-protractor/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:1857:20)\n    at [object Object].promise.ControlFlow.runEventLoop_ (/Users/jameslynch/gits/ng-nj.org/node_modules/gulp-protractor/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:1729:8)\n    at [object Object].eval (/Users/jameslynch/gits/ng-nj.org/node_modules/gulp-protractor/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2043:12)\n    at goog.async.run.processWorkQueue (/Users/jameslynch/gits/ng-nj.org/node_modules/gulp-protractor/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/async/run.js:130:15)"
+      }
+    ],
+    "duration": 1032
+  }
+]
+```
 
 
 ---
@@ -338,7 +430,7 @@ If you've been practicing Triforce Testing Development for over a year and would
 <div name="FAQ"></div>
 ## Part 7: Frequently Asked Questions
 
-There are currently no questions in the FAQ section. PleASe ask a question by submitting an issue.
+Feel free to contribute! ;)
 
 
 
