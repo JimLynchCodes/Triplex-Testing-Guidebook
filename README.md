@@ -28,6 +28,7 @@ Table of Contents
     - [Testing On Multiple Browsers](#Testing On Multiple Browsers)
     - [Everyone Reads the Gherkin, Dev's Change the Gherkin](#Everyone Reads, Devs Change)
     - [No Manual Testers](#No Manual Testers)
+    - [The BAU Handoff](#The BAU Handoff)
   - [Part 4: Additional Benefits of Triforce Development](#Additional Benefits of Triforce Development)
     - [Better Team Communication and Ubiquitous Language](#Better Team Communication and Ubiquitous Language)
     - [The Requirements and Code Are Always In Sync](#The Requirements and Code Are Always In Sync)
@@ -333,6 +334,11 @@ Because the feature files are somewhat scattered around the project's directory 
 <div name="No Manual Testers"></div>
 ### No Manual Testers
 Too often large development companies have qa teams that are just squads of manual testers. Manual testing should be though of as the enemy and avoided. Anything worth testing manually can and should be automated with Protractor. If you currently have manual testers, teach them the ways of Protractor so that can contribute to the automated testing effort. 
+
+
+<div name="The BAU Handoff"></div>
+### The BAU Handoff
+
 
 ---
 
