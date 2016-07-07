@@ -39,6 +39,7 @@ Table of Contents
     - [Sample Reports](#Sample Reports)
   - [Part 6: Random Things](#Random Things)
     - [Laid Back Perfectionism](#Laid Back Perfectionism)
+    - [Why "Test Your Own Code" Is a Terrible Policy](#Why "Test Your Own Code" Is a Terrible Policy)
     - [Triforce Tester Certification](#Triforce Tester Certification)
   - [Part 7: Frequently Asked Questions](#FAQ)
     - [Q. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
@@ -419,6 +420,10 @@ Example of an e2e report: I haven't found a nice way to visualize this yet, but 
 <div name="Laid Back Perfectionism"></div>
 ## Part 6: Laid Back Perfectionism
 There is a type of culture that is instilled in teams that are working well in triplex testing development. Code is an interesting thing because if it isn't "perfect" it's not yet finished. I say *perfect* in quotes because the word can have many different meanings. Some may consider code with no errors and that contains no bugs when it runs to be perfect. For some, perfect code has a type of aesthetic requirement or must be in a certain style, and still others will say it's perfect if and only if all it's relevant tests from all three areas have been identified, written, and passing in all cases. "Laid back perfection" should be a mantra and part of the corporate culture. Obviously, humans are imperfect beings and at times make mistakes. The key is that there is a series of checks  and balances that prevents imperfect code from reaching the end of the pipeline, the users. The testing triforce acts as the team's ultimately safety net and acts as a safegaurd that only allows perfect code to be deployed. Thus, there is no need for developers to be in hyper-alert mode or to manually ensure that there are no bugs. Ideally, this results in perfect code being pushed live without headache or worry from the developer team.   
+
+<div name="Why Test Your Own Code Is a Terrible Policy"></div>
+## Part 6: Why "Test Your Own Code" Is a Terrible Policy
+Sadly, many companies simply don't take automated seriously enough.  If your company has a "test your own code policy" then it has a **superficial testing ideaology that is not truly a part of the development process** in the way that Triplex Testing prescribes. Acceptance tests in particular are not just the developer's responsibility but the responsiblity of *every* memeber of the team. Developers working with business analysts and other developers helps promote a better understanding of the codebase for everyone, helps foster a ubiquitous language. As the company grows and junior developers are brought on "test your own code" becomes "test your own code... or not" and then the whole system really breaks down and you find yourself not doing triplex testing at all! Policy's like this raise an even larger red flag about how the company attributes certain code to a partcular person. This puts a lot of risk in weak links, and many agile circles agree that it is tremendously more beneficial for the developers and the end product itself if there is a *collective ownership* of the code.
 
 
 <div name="Triforce Tester Certification"></div>
