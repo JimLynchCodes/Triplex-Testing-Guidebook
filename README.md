@@ -6,17 +6,17 @@ A three-pronged approach to building great software with automated tests.
 ---
 
 Table of Contents
-  - [Part 1: Intro to The Testing Triforce](#Intro to Unit Testing)
-    - [History of the Testing Triforce](#history)
-    - [Purpose of The Testing Triforce](#Purpose of The Testing Triforce)
+  - [Part 1: Intro to The Testing Triplex](#Intro to The Testing Triplex)
+    - [History of the Testing Triplex](#history)
+    - [Purpose of The Testing Triplex](#Purpose of The Testing Triplex)
     - [It's Not Specific Angular](#It's Not Specific Angular)
     - [This is a Guide for Developing Software](#This is a Guide)
   - [Part 2: The Three Types of Automated Tests](#The Three Types of Automated Tests)
-    - [The Triforce Diagram](#The Triforce Diagram)
+    - [The Triplex Diagram](#The Triplex Diagram)
     - [Acceptance Tests](#Acceptance Tests)
     - [E2e Tests](#E2e Tests)
     - [Unit Tests](#Unit Tests)
-  - [Part 3: The Testing Triforce in Practice](#The Triforce in Practice)
+  - [Part 3: The Testing Triplex in Practice](#The Triplex in Practice)
     - [Where Do I Put My Files?](#Where Do I Put My Files)
     - [The Gherkin Comes First](#The Gherkin Comes First)
     - [Executing The Gherkin Scripts](#Executing The Gherkin Scripts)
@@ -29,7 +29,7 @@ Table of Contents
     - [Everyone Reads the Gherkin, Dev's Change the Gherkin](#Everyone Reads, Devs Change)
     - [No Manual Testers](#No Manual Testers)
     - [The BAU Handoff](#The BAU Handoff)
-  - [Part 4: Additional Benefits of Triforce Development](#Additional Benefits of Triforce Development)
+  - [Part 4: Additional Benefits of Triplex Development](#Additional Benefits of Triplex Development)
     - [Better Team Communication and Ubiquitous Language](#Better Team Communication and Ubiquitous Language)
     - [The Requirements and Code Are Always In Sync](#The Requirements and Code Are Always In Sync)
     - [No Manual Testing](#No Manual Testing)
@@ -42,52 +42,50 @@ Table of Contents
     - [The Mythical "Fourth Plex"](#The Mythical Fourth Plex)
     - [Laid Back Perfectionism](#Laid Back Perfectionism)
     - [Why "Test Your Own Code" Is a Terrible Policy](#Why Test Your Own Code Is a Terrible Policy)
-    - [Triforce Tester Certification](#Triforce Tester Certification)
+    - [Triplex Tester Certification](#Triplex Tester Certification)
   - [Part 7: Frequently Asked Questions](#FAQ)
     - [Q. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
     - [Q. Do I *need* to use acceptance tests?](#Q2)
     - [Q. Do I *need* to use unit tests?](#Q3)
     - [Q. Do I *need* to use e2e tests?](#Q4)
-    - [Q. When should I *NOT* use the Testing Triforce?](#Q5)
+    - [Q. When should I *NOT* use the Testing Triplex?](#Q5)
     - [Q. Most Cucumber / BDD examples have a root level "features" folder. Why don't you follow this convention?](#Q6)
 
 
 
 
-<div name="Intro to Unit Testing"></div>
-## Part 1: Intro to The Testing Triforce
+<div name="Intro to The Testing Triplex"></div>
+## Part 1: Intro to The Testing Triplex
 ---
 <div name="history"></div>
-### History of The Testing Triforce
-The Testing Triforce phrase was coined by Jim Lynch. While working as an angularJS developer he was doing standard unit testing along with some Protractor tests. Jim then read a book on BDD (Behavior Driven Development) and fell in love with the gherkin syntax and the way is was connected to step definitions. It was unclear how exactly to fit this into an Angular, SPA, or general JavaScript project in a way that gelled nicely with the other types of automated tests. After intensely studying these types of testing and using the, on various real-world projects he finally [built of time] found a way of developing software that works well and incorporated the three types of automated tests. This document attempts to formalize this philosphy that is now known as The Testing Triforce.
+### History of The Testing Triplex
+The Testing Triplex phrase was coined by Jim Lynch. While working as an angularJS developer he was doing standard unit testing along with some Protractor tests. Jim then read a book on BDD (Behavior Driven Development) and fell in love with the gherkin syntax and the way is was connected to step definitions. It was unclear how exactly to fit this into an Angular, SPA, or general JavaScript project in a way that gelled nicely with the other types of automated tests. After intensely studying these types of testing and using the, on various real-world projects he finally [built of time] found a way of developing software that works well and incorporated the three types of automated tests. This document attempts to formalize this philosphy that is now known as The Testing Triplex.
 
-<div name="Purpose of The Testing Triforce"></div>
-### Purpose of The Testing Triforce
+<div name="Purpose of The Testing Triplex"></div>
+### Purpose of The Testing Triplex
 
-The testing triforce is meant to prescribe a way for writing three types of automated tests: acceptance tests, e2e tests, and unit tests, but even more than that it builds on the test-first theories of TDD. Thus, the testing triforce becomes a tao, or way of developing software where the result is truly transparent, agile, and well-done. This guide provides a set of instructions for developing with The Triforce Testing mindset, but it is up to you to find the tao on your own.
+The testing triplex is meant to prescribe a way for writing three types of automated tests: acceptance tests, e2e tests, and unit tests, but even more than that it builds on the test-first theories of TDD. Thus, the testing triplex becomes a tao, or way of developing software where the result is truly transparent, agile, and well-done. This guide provides a set of instructions for developing with The Triplex Testing mindset, but it is up to you to find the tao on your own.
 
 <div name="It's Not Specific Angular"></div>
 ### It's Not Specific Angular
-It should be noted that the Testing Triforce is not something that is dependant on the Angular library. It can be applied to really any project made from html, css, and javascript which can be tested with Protractor and JavaScript unit testing framework like Jasmine or Chai-Mocha. It can even be applied to other front-end platforms like .NET, Ios, Android, Java, Ruby, C++, etc. although you will need different tooling for that platform than what is discussed here. 
+It should be noted that the Testing Triplex is not something that is dependant on the Angular library. It can be applied to really any project made from html, css, and javascript which can be tested with Protractor and JavaScript unit testing framework like Jasmine or Chai-Mocha. It can even be applied to other front-end platforms like .NET, Ios, Android, Java, Ruby, C++, etc. although you will need different tooling for that platform than what is discussed here. 
 
 <div name="This is a Guide"></div>
 ### This is a Guide For Developing Great Software
-This document is meant to be a guide for implementing Triforce testing into your own project. Rather than be taken as gospel, the ideas expressed here are meant to convince you of the benefits of implementing these three types of automated testing. The prescribes methodoligies here have been tried a tested, but you are free to change things in your own case if you find it necessary to do so. Note that this is not a guide for writing or running any of the three test types (although you may find the sample config files and shell commands useful). Rather, this is a more meta guide on building great software by leveraging automated testing. 
+This document is meant to be a guide for implementing triplex testing into your own project. Rather than be taken as gospel, the ideas expressed here are meant to convince you of the benefits of implementing these three types of automated testing. The prescribes methodoligies here have been tried a tested, but you are free to change things in your own case if you find it necessary to do so. Note that this is not a guide for writing or running any of the three test types (although you may find the sample config files and shell commands useful). Rather, this is a more meta guide on building great software by leveraging automated testing. 
  
 ---
  <div name="The Three Types of Automated Tests"></div>
 ## Part 2: The Three Types of Automated Tests
 
-<div name="The Triforce Diagram"></div>
-### The Triforce Diagram
+<div name="The Triplex Diagram"></div>
+### The Triplex Diagram
 
-![testing triforce](./images/testing-triforce.png "Testing Triforce")
+![testing triplex](./images/testing-triforce.png "Testing Triplex")
 
-*credit: the triforce image is a copyrighted symbol of Nintendo Corporation.*
+*credit: the triforce image is a copyrighted symbol of Nintendo Corporation and was popularized by the video games franchise "The Legend of Zelda".*
 
-The triforce is a symbol popularized by the video games franchise "The Legend of Zelda".
-
-Here we use it to represent the three types of automated tests: 
+Here we use it the triplex diagram represent the three types of automated tests: 
 
 - Acceptance Tests
 - E2e Tests
@@ -97,7 +95,7 @@ Here we use it to represent the three types of automated tests:
 ### Acceptance Tests
 <img src="./images/cucumber.png" height="47"><img src="./images/protractor.png" height="50"> <img src="./images/mocha-chai.png" height="50">
 
-Acceptance tests, at the very top of the triforce, should be the starting point at the beginning of any automated testing effort. Because it necessarily forces you to think about the application in high level terms about what it is actually doing, it is a perfect way to **figure out what you want to build** while at the same time *effectively communicating those ideas to the developers, business analysts, and other stakeholders*. 
+Acceptance tests, at the very top of the triplex diagram, should be the starting point at the beginning of any automated testing effort. Because it necessarily forces you to think about the application in high level terms about what it is actually doing, it is a perfect way to **figure out what you want to build** while at the same time *effectively communicating those ideas to the developers, business analysts, and other stakeholders*. 
 
 The gherkin feature files are normally referred to as high level acceptance tests. Using the Given-When-Then-And-But syntax, these high level acceptance tests are then mapped to low-level acceptance tests, written in your projects main programming language (in this case JavaScript). 
 
@@ -120,9 +118,9 @@ Ahh, the unit tests. Incorporating heavy Protractor usage for E2e and acceptance
 
 
 --- 
-<div name="The Triforce in Practice"></div>
-## Part 3: The Triforce in Practice
-This section provides some advice for using the Triforce in Practice.
+<div name="The Triplex in Practice"></div>
+## Part 3: The Triplex in Practice
+This section provides some advice for using the Triplex in Practice.
 
 <div name="Where Do I Put My Files"></div>
 ### Where Do I Put My Files? 
@@ -343,8 +341,8 @@ Too often large development companies have qa teams that are just squads of manu
 
 ---
 
-<div name="Additional Benefits of Triforce Development"></div>
-## Part 4: Additional Benefits of Triforce Development
+<div name="Additional Benefits of Triplex Development"></div>
+## Part 4: Additional Benefits of Triplex Development
 
 <div name="Better Team Communication and Ubiquitous Language"></div>
 ### Better Team Communication and Ubiquitous Language
@@ -432,16 +430,16 @@ Triplex testing is based on the three core types of automated testing: acceptanc
 
 <div name="Laid Back Perfectionism"></div>
 ### Laid Back Perfectionism
-There is a type of culture that is instilled in teams that are working well in triplex testing development. Code is an interesting thing because if it isn't "perfect" it's not yet finished. I say *perfect* in quotes because the word can have many different meanings. Some may consider code with no errors and that contains no bugs when it runs to be perfect. For some, perfect code has a type of aesthetic requirement or must be in a certain style, and still others will say it's perfect if and only if all it's relevant tests from all three areas have been identified, written, and passing in all cases. "Laid back perfection" should be a mantra and part of the corporate culture. Obviously, humans are imperfect beings and at times make mistakes. The key is that there is a series of checks  and balances that prevents imperfect code from reaching the end of the pipeline, the users. The testing triforce acts as the team's ultimately safety net and acts as a safegaurd that only allows perfect code to be deployed. Thus, there is no need for developers to be in hyper-alert mode or to manually ensure that there are no bugs. Ideally, this results in perfect code being pushed live without headache or worry from the developer team.   
+There is a type of culture that is instilled in teams that are working well in triplex testing development. Code is an interesting thing because if it isn't "perfect" it's not yet finished. I say *perfect* in quotes because the word can have many different meanings. Some may consider code with no errors and that contains no bugs when it runs to be perfect. For some, perfect code has a type of aesthetic requirement or must be in a certain style, and still others will say it's perfect if and only if all it's relevant tests from all three areas have been identified, written, and passing in all cases. "Laid back perfection" should be a mantra and part of the corporate culture. Obviously, humans are imperfect beings and at times make mistakes. The key is that there is a series of checks  and balances that prevents imperfect code from reaching the end of the pipeline, the users. The testing triplex acts as the team's ultimately safety net and acts as a safegaurd that only allows perfect code to be deployed. Thus, there is no need for developers to be in hyper-alert mode or to manually ensure that there are no bugs. Ideally, this results in perfect code being pushed live without headache or worry from the developer team.   
 
 <div name="Why Test Your Own Code Is a Terrible Policy"></div>
 ## Why "Test Your Own Code" Is a Terrible Policy
 Sadly, many companies simply don't take automated seriously enough.  If your company has a "test your own code policy" then it has a **superficial testing ideaology that is not truly a part of the development process** in the way that Triplex Testing prescribes. Acceptance tests in particular are not just the developer's responsibility but the responsiblity of *every* member of the team. Developers working with business analysts and other developers helps promote a better understanding of the codebase for everyone, fosters ubiquitous language, and allows the team to hammer down a collective understanding of the requirements (and have the in english writing that, as a bonus, is executable). As the company grows and junior developers are brought on "test your own code" becomes "test your own code... or not" and then the whole system really breaks down, and all of the sudden the team is not doing triplex testing at all! Harnessing these three automated testing methodologies can be challenging, and let's be honest- many great "production code" developers don't know the first thing about unit tests. Putting ownership on code files and assignments crushes colalboration and destroys opportunities for learning and intellectual advancement. Policy's like "test your own code" raise an even larger red flag about how the company attributes certain code to a particular person. This puts a lot of risk in *weak links*, depency on *tribal knowledge*, and it becomes diffult to pass of to a BAU team. Many agile circles agree that it is tremendously more beneficial for the developers and the end product itself if there is a *collective ownership* of the code.
 
 
-<div name="Triforce Tester Certification"></div>
-### Triforce Tester Certification
-If you've been practicing Triforce Testing Development for over a year and would like to take the official Triforce Tester Examination for the prestigious "Triforce Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
+<div name="Triplex Tester Certification"></div>
+### Triplex Tester Certification
+If you've been practicing Triplex Testing Development for over a year and would like to take the official Triplex Tester Examination for the prestigious "Triplex Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
 
 ---
 
