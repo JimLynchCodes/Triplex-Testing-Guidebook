@@ -39,7 +39,7 @@ Table of Contents
     - [Sample Reports](#Sample Reports)
   - [Part 6: Random Things](#Random Things)
     - [Laid Back Perfectionism](#Laid Back Perfectionism)
-    - [Why "Test Your Own Code" Is a Terrible Policy](#Why "Test Your Own Code" Is a Terrible Policy)
+    - [Why "Test Your Own Code" Is a Terrible Policy](#Why Test Your Own Code Is a Terrible Policy)
     - [Triforce Tester Certification](#Triforce Tester Certification)
   - [Part 7: Frequently Asked Questions](#FAQ)
     - [Q. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
