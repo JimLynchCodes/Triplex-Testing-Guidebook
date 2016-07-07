@@ -39,6 +39,7 @@ Table of Contents
     - [Meetings with "The Boss"](#Meetings with The Boss)
     - [Sample Reports](#Sample Reports)
   - [Part 6: Random Things](#Random Things)
+    - [The Mythical "Fourth Plex"](#The Mythical Fourth Plex)
     - [Laid Back Perfectionism](#Laid Back Perfectionism)
     - [Why "Test Your Own Code" Is a Terrible Policy](#Why Test Your Own Code Is a Terrible Policy)
     - [Triforce Tester Certification](#Triforce Tester Certification)
@@ -423,8 +424,14 @@ Example of an e2e report: I haven't found a nice way to visualize this yet, but 
 ## Part 6: Random Things
 
 
+- [The Mythical "Fourth Plex"](#The Mythical Fourth Plex)
+<div name="The Mythical Fourth Plex"></div>
+### The Mythical "Fourth Plex"
+Triplex testing is based on the three core types of automated testing: acceptance tests, e2e tests, and unit tests. Armed with these, you're capable of incredibly solid coverage of your entire application. Often the unsual tests such as exploratory and smoke tests as grouped into the e2e testing category (as they should be). However, there are times when another method of automated testing emerges that doesn't fit into any of the three categories, and this is sometimes referred to as, "a fourth plex". For example,  [percy.io](https://percy.io/) is a tool for "visual regression testing" that can alert you of any unwanted visual changes from css or anything else. As new tools emerge and you find use cases for them in your work it would be silly not to take advantage of them. Just keep the core theories of Triplex testing in mind and view and fourth plex as an additional weapon in your automated testing arnesal.
+
+
 <div name="Laid Back Perfectionism"></div>
-## Laid Back Perfectionism
+### Laid Back Perfectionism
 There is a type of culture that is instilled in teams that are working well in triplex testing development. Code is an interesting thing because if it isn't "perfect" it's not yet finished. I say *perfect* in quotes because the word can have many different meanings. Some may consider code with no errors and that contains no bugs when it runs to be perfect. For some, perfect code has a type of aesthetic requirement or must be in a certain style, and still others will say it's perfect if and only if all it's relevant tests from all three areas have been identified, written, and passing in all cases. "Laid back perfection" should be a mantra and part of the corporate culture. Obviously, humans are imperfect beings and at times make mistakes. The key is that there is a series of checks  and balances that prevents imperfect code from reaching the end of the pipeline, the users. The testing triforce acts as the team's ultimately safety net and acts as a safegaurd that only allows perfect code to be deployed. Thus, there is no need for developers to be in hyper-alert mode or to manually ensure that there are no bugs. Ideally, this results in perfect code being pushed live without headache or worry from the developer team.   
 
 <div name="Why Test Your Own Code Is a Terrible Policy"></div>
