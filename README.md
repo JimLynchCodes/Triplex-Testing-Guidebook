@@ -384,15 +384,15 @@ Example of a cucumberjs acceptance tests report:
 
 Cucumber reports are usually interactive an expandable. You can play with a [live demo here](http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-bootstrap.html).
 
-<img src="./cucumber-report-screenshot.png">
+<img src="./images/cucumber-report-screenshot.png">
 
 
 Example of a unit testing coverage report:
 For Angular (and pretty much all front-end applications) code coverage is done with the *Istabul* library, and you only need focus on reading the report: 
 
-<img src="./unit-test-report-directory-view.png">
+<img src="./images/unit-test-report-directory-view.png">
 
-<img src="./unit-test-report-file-view.png">
+<img src="./images/unit-test-report-file-view.png">
 
 
 Example of an e2e report: I haven't found a nice way to visualize this yet, but the e2e protractor script does output json reporting to a file:
