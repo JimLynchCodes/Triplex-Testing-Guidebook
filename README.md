@@ -43,6 +43,7 @@ Table of Contents
     - [Laid Back Perfectionism](#Laid Back Perfectionism)
     - [Why "Test Your Own Code" Is a Terrible Policy](#Why Test Your Own Code Is a Terrible Policy)
     - [Triplex Tester Certification](#Triplex Tester Certification)
+    - [Exploratory Testing](#Exploratory Testing)
   - [Part 7: Frequently Asked Questions](#FAQ)
     - [Q. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
     - [Q. Do I *need* to use acceptance tests?](#Q2)
@@ -338,7 +339,7 @@ Because the feature files are somewhat scattered around the project's directory 
 
 <div name="No Manual Testers"></div>
 ### No Manual Testers
-Too often large development companies have qa teams that are just squads of manual testers. Manual testing should be though of as the enemy and avoided. Anything worth testing manually can and should be automated with Protractor. If you currently have manual testers, teach them the ways of Protractor so that can contribute to the automated testing effort. 
+Too often large development companies have qa teams that are just squads of manual testers. Manual testing should be though of as the enemy and avoided. Almsot anything worth testing manually can and should be automated with Protractor. Sometimes, exploratory tests may be useful for pointing out otherwise hard to find bugs, but even then you'll want to automate those tests to check them for regression later. If you currently have manual testers, teach them the ways of Protractor so that can contribute to the automated testing effort. 
 
 
 <div name="The BAU Handoff"></div>
@@ -442,10 +443,16 @@ There is a type of culture that is instilled in teams that are working well in t
 ## Why "Test Your Own Code" Is a Terrible Policy
 Sadly, many companies simply don't take automated seriously enough.  If your company has a "test your own code policy" then it has a **superficial testing ideaology that is not truly a part of the development process** in the way that Triplex Testing prescribes. Acceptance tests in particular are not just the developer's responsibility but the responsiblity of *every* member of the team. Developers working with business analysts and other developers helps promote a better understanding of the codebase for everyone, fosters ubiquitous language, and allows the team to hammer down a collective understanding of the requirements (and have the in english writing that, as a bonus, is executable). As the company grows and junior developers are brought on "test your own code" becomes "test your own code... or not" and then the whole system really breaks down, and all of the sudden the team is not doing triplex testing at all! Harnessing these three automated testing methodologies can be challenging, and let's be honest- many great "production code" developers don't know the first thing about unit tests. Putting ownership on code files and assignments crushes colalboration and destroys opportunities for learning and intellectual advancement. Policy's like "test your own code" raise an even larger red flag about how the company attributes certain code to a particular person. This puts a lot of risk in *weak links*, depency on *tribal knowledge*, and it becomes diffult to pass of to a BAU team. Many agile circles agree that it is tremendously more beneficial for the developers and the end product itself if there is a *collective ownership* of the code.
 
+<div name="Exploratory Testing"></div>
+### Exploratory Testing
+Exploratorny testing is the act of testing the software with the intent of breaking it to uncover any potential bugs. Often times professional QA testers are great at this (even better than developers) because they bring a fresh perspective and have an intuition about where faults commonly occur in software.
+
 
 <div name="Triplex Tester Certification"></div>
 ### Triplex Tester Certification
 If you've been practicing Triplex Testing Development for over a year and would like to take the official Triplex Tester Examination for the prestigious "Triplex Tester" designation then simply open an issue on this repo and a proctor will get in touch with you. 
+
+
 
 ---
 
