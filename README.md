@@ -459,7 +459,29 @@ If you've been practicing Triplex Testing Development for over a year and would 
 <div name="FAQ"></div>
 ## Part 7: Frequently Asked Questions
 
-Feel free to contribute! ;)
+<div name="Q1"></div>
+### Q1. Why is it wrong to treat low level step definitions like unit tests?
+
+<div name="Q2"></div>
+## Part 7: Frequently Asked Questions
+
+<div name="Q3"></div>
+## Part 7: Frequently Asked Questions
+
+<div name="Q4"></div>
+## Part 7: Frequently Asked Questions
+
+
+<div name="Q5"></div>
+## Part 7: Frequently Asked Questions
+
+
+<div name="Q6"></div>
+## Part 7: Frequently Asked Questions
+
+
+<div name="Q7"></div>
+## Part 7: Frequently Asked Questions
 
 
 
