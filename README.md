@@ -44,6 +44,7 @@ Table of Contents
     - [Why "Test Your Own Code" Is a Terrible Policy](#Why Test Your Own Code Is a Terrible Policy)
     - [Triplex Tester Certification](#Triplex Tester Certification)
     - [Exploratory Testing](#Exploratory Testing)
+    - [Triplex Testing Community Groups](#Triplex Testing Community Groups)
   - [Part 7: Frequently Asked Questions](#FAQ)
     - [Q1. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
     - [Q2. Do I *need* to use acceptance tests?](#Q2)
@@ -447,6 +448,13 @@ Sadly, many companies simply don't take automated seriously enough.  If your com
 <div name="Exploratory Testing"></div>
 ### Exploratory Testing
 Exploratorny testing is the act of testing the software with the intent of breaking it to uncover any potential bugs. Often times professional QA testers are great at this (even better than developers) because they bring a fresh perspective and have an intuition about where faults commonly occur in software.
+
+Use a new protractor configuration file that is set up basically just like your e2e protractor file. This difference is in the type of protractor testst heat you will write here. 
+
+
+<div name="Triplex Testing Community Groups"></div>
+### Triplex Testing Community Groups
+
 
 
 <div name="Triplex Tester Certification"></div>
