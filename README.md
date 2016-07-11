@@ -454,7 +454,7 @@ Use a new protractor configuration file that is set up basically just like your 
 
 <div name="Triplex Testing Community Groups"></div>
 ### Triplex Testing Community Groups
-Join our facebook group: [https://www.facebook.com/triplextesting](#https://www.facebook.com/triplextesting)
+Please join our facebook group here(!!): [https://www.facebook.com/triplextesting](#https://www.facebook.com/triplextesting)
 
 
 <div name="Triplex Tester Certification"></div>
