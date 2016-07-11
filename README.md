@@ -45,14 +45,15 @@ Table of Contents
     - [Triplex Tester Certification](#Triplex Tester Certification)
     - [Exploratory Testing](#Exploratory Testing)
   - [Part 7: Frequently Asked Questions](#FAQ)
-    - [Q. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
-    - [Q. Do I *need* to use acceptance tests?](#Q2)
-    - [Q. Do I *need* to use unit tests?](#Q3)
-    - [Q. Do I *need* to use e2e tests?](#Q4)
-    - [Q. When should I *NOT* use the Testing Triplex?](#Q5)
-    - [Q. Most Cucumber / BDD examples have a root level "features" folder. Why don't you follow this convention?](#Q6)
-
-
+    - [Q1. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
+    - [Q2. Do I *need* to use acceptance tests?](#Q2)
+    - [Q3. Do I *need* to use unit tests?](#Q3)
+    - [Q4. Do I *need* to use e2e tests?](#Q4)
+    - [Q5. When should I *NOT* use the Testing Triplex?](#Q5)
+    - [Q6. Most Cucumber / BDD examples have a root level "features" folder. Why don't you follow this convention?](#Q6)
+    - [Q7. My boss says we don't have enough time for testing. What should I do?](#Q7)
+    - [Q8. Q8. Can't we just manually test everything?](#Q8)
+    - [Q9. Will the theory of Triplex Testing work for [insert favorite platform here]?](#Q9)
 
 
 <div name="Intro to The Testing Triplex"></div>
@@ -459,29 +460,43 @@ If you've been practicing Triplex Testing Development for over a year and would 
 <div name="FAQ"></div>
 ## Part 7: Frequently Asked Questions
 
+Q. 
+Q. 
+Q. 
+Q. When should I NOT use the Testing Triplex?
+Q. Most Cucumber / BDD examples have a root level "features" folder. Why don't you follow this convention?
+
 <div name="Q1"></div>
 ### Q1. Why is it wrong to treat low level step definitions like unit tests?
 
 <div name="Q2"></div>
-## Part 7: Frequently Asked Questions
+### Q2. Do I need to use acceptance tests?
 
 <div name="Q3"></div>
-## Part 7: Frequently Asked Questions
+### Q3. Do I need to use unit tests? 
 
 <div name="Q4"></div>
-## Part 7: Frequently Asked Questions
-
+### Q4. Do I need to use e2e tests?
 
 <div name="Q5"></div>
-## Part 7: Frequently Asked Questions
+### Q5. When should I NOT use the Testing Triplex?
 
 
 <div name="Q6"></div>
-## Part 7: Frequently Asked Questions
+### Q6. Most Cucumber / BDD examples have a root level "features" folder. Why don't you follow this convention?
 
 
 <div name="Q7"></div>
-## Part 7: Frequently Asked Questions
+### Q7. My boss says we don't have enough time for testing. What should I do?
+
+
+<div name="Q8"></div>
+### Q8. Can't we just manually test everything?
+
+
+<div name="Q9"></div>
+### Q9. Will the theory of Triplex Testing work for [insert favorite platform here]?
+
 
 
 
