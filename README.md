@@ -38,14 +38,16 @@ Table of Contents
     - [Generating Reports From the Codebase](#Generating Reports From the Codebase)
     - [Meetings with "The Boss"](#Meetings with The Boss)
     - [Sample Reports](#Sample Reports)
-  - [Part 6: Random Things](#Random Things)
+  - [Part 6: Part 6: Official Triplex Projects](#Part 6: Official Triplex Projects)
+    - [NG-NJ](#NG-NJ)
+  - [Part 7: Random Things](#Random Things)
     - [The Mythical "Fourth Plex"](#The Mythical Fourth Plex)
     - [Laid Back Perfectionism](#Laid Back Perfectionism)
     - [Why "Test Your Own Code" Is a Terrible Policy](#Why Test Your Own Code Is a Terrible Policy)
     - [Triplex Tester Certification](#Triplex Tester Certification)
     - [Exploratory Testing](#Exploratory Testing)
     - [Triplex Testing Community Groups](#Triplex Testing Community Groups)
-  - [Part 7: Frequently Asked Questions](#FAQ)
+  - [Part 8: Frequently Asked Questions](#FAQ)
     - [Q1. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
     - [Q2. Do I *need* to use acceptance tests?](#Q2)
     - [Q3. Do I *need* to use unit tests?](#Q3)
@@ -427,8 +429,18 @@ Example of an e2e report: I haven't found a nice way to visualize this yet, but 
 
 
 ---
+
+<div name="Official Triplex Projects"></div>
+## Part 6: Official Triplex Projects
+Projects that are offically recognised as following Triplex methodologies.
+
+<div name="NG-NJ"></div>
+###[NG-NJ](#https://github.com/ng-nj/ng-nj.org)
+This i s the official home page for NG-NJ. This site began as a side project by Jim Lynch. It was built on AngularJS 1.4 and was scaffolded with the Gulp-Angular yeoman generator. This was the first project to be officially recognised as a Triplex Testing Project. 
+
+
 <div name="Random Things"></div>
-## Part 6: Random Things
+## Part 7: Random Things
 
 
 - [The Mythical "Fourth Plex"](#The Mythical Fourth Plex)
@@ -466,13 +478,7 @@ If you've been practicing Triplex Testing Development for over a year and would 
 ---
 
 <div name="FAQ"></div>
-## Part 7: Frequently Asked Questions
-
-Q. 
-Q. 
-Q. 
-Q. When should I NOT use the Testing Triplex?
-Q. Most Cucumber / BDD examples have a root level "features" folder. Why don't you follow this convention?
+## Part 8: Frequently Asked Questions
 
 <div name="Q1"></div>
 ### Q1. Why is it wrong to treat low level step definitions like unit tests?
