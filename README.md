@@ -1,7 +1,11 @@
 
 # <img src="./images/nice-triforce.png" height="30"> ~ The Triplex Testing Guidebook ~ <img src="./images/nice-triforce.png" height="30">
 
-A three-pronged approach to building great software with automated tests. 
+*Official tagline: 
+A three-pronged approach to building great software with automated tests.*
+
+*Less trendy, but more descriptive tagline: 
+A methodology for leveraging automated acceptance, e2e, and unit tests building great front-end applications (especially with SPA frameworks such as Angular).*
 
 ---
 
