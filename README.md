@@ -19,16 +19,25 @@ Table of Contents
     - [Overview of the Three Parts](#Overview of the Three Parts)
     - [The Triplex Diagram](#The Triplex Diagram)
     - [Acceptance Tests](#Acceptance Tests)
+      - A Gherkin Example
+      - A Step Definition Example
+      - Running Acceptance Tests
     - [E2e Tests](#E2e Tests)
+      - An E2e Test Example
+      - Running E2e Tests
     - [Unit Tests](#Unit Tests)
+      - A Unit Test Example
+      - Running Unit Tests
   - [Part 3: The Testing Triplex in Practice](#The Triplex in Practice)
     - [Where Do I Put My Files?](#Where Do I Put My Files)
     - [The Gherkin Comes First](#The Gherkin Comes First)
     - [Executing The Gherkin Scripts](#Executing The Gherkin Scripts)
     - [Executing the Acceptance Tests](#Executing the Acceptance Tests)
     - [Implementing Step Definitions with Protractor](#Implementing Step Definitions with Protractor)
+    - [Avoiding the UI in Step Definitions](#Avoiding the UI in Step Definitions)
     - [Implementing E2e Tests in a Separate Protractor Config file](#Implementing E2e Tests in a Separate Protractor Conf.js file)
     - [Write Unit Tests and Code TDD Style](#Write Unit Tests and Code TDD Style)
+    - [All the Browsers in All the Land](#All the Browsers in All the Land)
     - [Notes on Deployment](#Deployment)
     - [Testing On Multiple Browsers](#Testing On Multiple Browsers)
     - [Everyone Reads the Gherkin, Dev's Change the Gherkin](#Everyone Reads, Devs Change)
@@ -45,7 +54,7 @@ Table of Contents
     - [Sample Reports](#Sample Reports)
   - [Part 6: Official Triplex Projects](#Official Triplex Projects)
     - [NG-NJ](#NG-NJ)
-  - [Part 7: Closing Thoughts](#Closing Thoguhts)
+  - [Part 7: Closing Thoughts](#Closing Thoughts)
     - [The Mythical "Fourth Plex"](#The Mythical Fourth Plex)
     - [Laid Back Perfectionism](#Laid Back Perfectionism)
     - [Why "Test Your Own Code" Is a Terrible Policy](#Why Test Your Own Code Is a Terrible Policy)
@@ -55,7 +64,7 @@ Table of Contents
     - [Exploratory Testing](#Exploratory Testing)
     - [Triplex Testing Community Groups](#Triplex Testing Community Groups)
   - [Part 8: Frequently Asked Questions](#FAQ)
-    - [Q1. Why is it wrong to treat low level step definitions like unit tests?](#Q1)
+    - [Q1. Is it wrong to treat low level step definitions like unit tests?](#Q1)
     - [Q2. Do I *need* to use acceptance tests?](#Q2)
     - [Q3. Do I *need* to use unit tests?](#Q3)
     - [Q4. Do I *need* to use e2e tests?](#Q4)
@@ -78,7 +87,7 @@ The Testing Triplex phrase was coined by Jim Lynch. While working as an angularJ
 
 The testing triplex is meant to prescribe a way for writing three types of automated tests: acceptance tests, e2e tests, and unit tests, but even more than that it builds on the test-first theories of TDD. Thus, the testing triplex becomes a tao, or way of developing software where the result is truly transparent, agile, and well-done. This guide provides a set of instructions for developing with The Triplex Testing mindset, but it is up to you to find the tao on your own.
 
-<div name="It's Not SpecificTo Angular"></div>
+<div name="It's Not Specific To Angular"></div>
 ### It's Not Specific To Angular
 It should be noted that the Testing Triplex is not something that is dependant on the Angular library. It can be applied to really any project made from html, css, and javascript which can be tested with Protractor and JavaScript unit testing framework like Jasmine or Chai-Mocha. It can even be applied to other front-end platforms like .NET, Ios, Android, Java, Ruby, C++, etc. although you will need different tooling for that platform than what is discussed here. 
 
@@ -231,7 +240,10 @@ Now you should be able to run gherkin tests like this:
 ### Implementing Step Definitions with Protractor Selenium Tests
 If you are using the protractor config file above then you might notice that for the step definition files it's only looking for .steps.js files. This means we can put them anywhere in our project, and we don't need any *step_definitions* folders (but if you think it makes things more readable go ahead and use them). The scenarios will almost always be from a user's point of view, and so it naturally follows to automate the tests from the user's point of view. This is why we write low level step definitions with protractor api. Your scenarios should just describe things that should happen, and in the protractor tests you can *expect* those things to happen after clicking (or interacting with in another way) some element on the page. Also, notice that these tests are still using the underlying functions of the application and so the protractor tests are indirectly testing individual functions of the application. However, because this protractor tests check the application in a *black box* fashion, when errors fail it's tough to find the root cause of issues from these tests alone. 
 
-
+<div name="Avoiding the UI in Step Definitions"></div>
+### Avoiding the UI in Step Definitions
+[TODO]
+Sometimes...
 
 <div name="Implementing E2e Tests in a Separate Protractor Conf.js file"></div>
 ### Implementing E2e Tests in a Separate Protractor Conf.js file.
@@ -337,6 +349,13 @@ And then run it like this:
 `karma start unit-tests.config.js`
 
 You can put .spec.js files anywhere in the src/ folder and they will automatically be picked up when you run karma. 
+
+
+<div name="All the Browsers in All the Land"></div>
+### All the Browsers in All the Land
+All the Browsers in All the Land
+
+
 
 <div name="Deployment"></div>
 ### Notes on Deployment
@@ -514,7 +533,7 @@ If you've been practicing Triplex Testing Development for over a year and would 
 ## Part 8: Frequently Asked Questions
 
 <div name="Q1"></div>
-### Q1. Why is it wrong to treat low level step definitions like unit tests?
+### Q1. Is it wrong to treat low level step definitions like unit tests?
 
 <div name="Q2"></div>
 ### Q2. Do I need to use acceptance tests?
