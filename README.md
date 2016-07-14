@@ -12,6 +12,7 @@ Table of Contents
     - [It's Not Specific To Angular](#It's Not Specific To Angular)
     - [This is a Guide for Developing Software](#This is a Guide)
   - [Part 2: The Three Types of Automated Tests](#The Three Types of Automated Tests)
+    - [Overview of the Three Parts](#Overview of the Three Parts)
     - [The Triplex Diagram](#The Triplex Diagram)
     - [Acceptance Tests](#Acceptance Tests)
     - [E2e Tests](#E2e Tests)
@@ -40,10 +41,12 @@ Table of Contents
     - [Sample Reports](#Sample Reports)
   - [Part 6: Part 6: Official Triplex Projects](#Part 6: Official Triplex Projects)
     - [NG-NJ](#NG-NJ)
-  - [Part 7: Random Things](#Random Things)
+  - [Part 7: Closing Thoughts](#Closing Thoguhts)
     - [The Mythical "Fourth Plex"](#The Mythical Fourth Plex)
     - [Laid Back Perfectionism](#Laid Back Perfectionism)
     - [Why "Test Your Own Code" Is a Terrible Policy](#Why Test Your Own Code Is a Terrible Policy)
+    - [Triplex Testing and the V-Model](#Triplex Testing and the V-Model)
+    - [Effective Collaboration and Mob Programming](#Effective Collaboration and Mob Programming)
     - [Triplex Tester Certification](#Triplex Tester Certification)
     - [Exploratory Testing](#Exploratory Testing)
     - [Triplex Testing Community Groups](#Triplex Testing Community Groups)
@@ -82,6 +85,20 @@ This document is meant to be a guide for implementing triplex testing into your 
 ---
  <div name="The Three Types of Automated Tests"></div>
 ## Part 2: The Three Types of Automated Tests
+
+
+ <div name="Overview of the Three Parts"></div>
+### Overview of the Three Parts
+If you looked up the word *triplex* in the dictionary you would get such definitions like, "a dwelling composed of three units" or, "having three parts". Triplex Testing gets it name from it's three independent parts, and understanding each of the three parts is critical to doing Triplex Testing correctly. Later in this chapter we'll get more technical and later we'll talk about different tooling for various tests, but here I want to describe each of the three parts in simple, platform-independent terms.
+
+- Tests that check the **requirements, behavior, specifications** of the project. 
+
+
+- Tests that check the **internal application logic and algorithms** of the project  - 
+
+
+- Tests that check the **interactions and connections between components or systems**. 
+
 
 <div name="The Triplex Diagram"></div>
 ### The Triplex Diagram
@@ -439,8 +456,10 @@ Projects that are offically recognised as following Triplex methodologies.
 This i s the official home page for NG-NJ. This site began as a side project by Jim Lynch. It was built on AngularJS 1.4 and was scaffolded with the Gulp-Angular yeoman generator. This was the first project to be officially recognised as a Triplex Testing Project. 
 
 
-<div name="Random Things"></div>
-## Part 7: Random Things
+<div name="Closing Thoughts"></div>
+## Part 7: Closing Thoughts
+
+
 
 
 - [The Mythical "Fourth Plex"](#The Mythical Fourth Plex)
@@ -456,6 +475,16 @@ There is a type of culture that is instilled in teams that are working well in t
 <div name="Why Test Your Own Code Is a Terrible Policy"></div>
 ## Why "Test Your Own Code" Is a Terrible Policy
 Sadly, many companies simply don't take automated seriously enough.  If your company has a "test your own code policy" then it has a **superficial testing ideaology that is not truly a part of the development process** in the way that Triplex Testing prescribes. Acceptance tests in particular are not just the developer's responsibility but the responsiblity of *every* member of the team. Developers working with business analysts and other developers helps promote a better understanding of the codebase for everyone, fosters ubiquitous language, and allows the team to hammer down a collective understanding of the requirements (and have the in english writing that, as a bonus, is executable). As the company grows and junior developers are brought on "test your own code" becomes "test your own code... or not" and then the whole system really breaks down, and all of the sudden the team is not doing triplex testing at all! Harnessing these three automated testing methodologies can be challenging, and let's be honest- many great "production code" developers don't know the first thing about unit tests. Putting ownership on code files and assignments crushes colalboration and destroys opportunities for learning and intellectual advancement. Policy's like "test your own code" raise an even larger red flag about how the company attributes certain code to a particular person. This puts a lot of risk in *weak links*, depency on *tribal knowledge*, and it becomes diffult to pass of to a BAU team. Many agile circles agree that it is tremendously more beneficial for the developers and the end product itself if there is a *collective ownership* of the code.
+
+
+<div name="Triplex Testing and the V-Model"></div>
+### Triplex Testing and the V-Model
+
+
+
+<div name="Effective Collaboration and Mob Programming"></div>
+### Effective Collaboration and Mob Programming
+
 
 <div name="Exploratory Testing"></div>
 ### Exploratory Testing
