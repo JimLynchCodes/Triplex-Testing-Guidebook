@@ -15,6 +15,7 @@ Table of Contents
     - [Purpose of The Testing Triplex](#Purpose of The Testing Triplex)
     - [It's Not Specific To Angular](#It's Not Specific To Angular)
     - [This is a Guide for Developing Software](#This is a Guide)
+    - [Is This Yet Another Interpretation of "Agile"?](#Is This Yet Another Interpretation of Agile?)
   - [Part 2: The Three Types of Automated Tests](#The Three Types of Automated Tests)
     - [Overview of the Three Parts](#Overview of the Three Parts)
     - [The Triplex Diagram](#The Triplex Diagram)
@@ -63,6 +64,8 @@ Table of Contents
     - [Triplex Tester Certification](#Triplex Tester Certification)
     - [Exploratory Testing](#Exploratory Testing)
     - [Triplex Testing Community Groups](#Triplex Testing Community Groups)
+    - [The Jasmine Vs. Chai Debate](#The Jasmine Vs. Chai Debate)
+    - [The Importance of Having Conversations](#The Importance of Having Conversations)
   - [Part 8: Frequently Asked Questions](#FAQ)
     - [Q1. Is it wrong to treat low level step definitions like unit tests?](#Q1)
     - [Q2. Do I *need* to use acceptance tests?](#Q2)
@@ -94,6 +97,10 @@ It should be noted that the Testing Triplex is not something that is dependant o
 <div name="This is a Guide"></div>
 ### This is a Guide For Developing Great Software
 This document is meant to be a guide for implementing triplex testing into your own project. Rather than be taken as gospel, the ideas expressed here are meant to convince you of the benefits of implementing these three types of automated testing. The prescribes methodoligies here have been tried a tested, but you are free to change things in your own case if you find it necessary to do so. Note that this is not a guide for writing or running any of the three test types (although you may find the sample config files and shell commands useful). Rather, this is a more meta guide on building great software by leveraging automated testing. 
+ 
+ <div name="Is This Yet Another Interpretation of Agile?"></div>
+### Is This Yet Another Interpretation of "Agile"?
+This question here is whether Triplex Testing is really just another interpretation of "Agile methodologies". In some ways, yes. Triplex Testing values many of the core agile principles, but I like to think that Triplex Testing is a bit more description about *how* you acutally go about working this way from a programming point of view. In fact, Triplex Testing is so focused on the technical aspects that I would recommend any team attempting to try this to also look into [Design Driven Devlopment](#http://www.designdrivendevelopment.org/) and [Agile Project Management](#https://www.mountaingoatsoftware.com/agile/agile-project-management) since, while we think these are important, they are not covered in this guidebook. It seems that everyone has their own personal version of what agile means to them. We consider Triplex Testing to be a methodology that overlaps with Agile in that it values things like extreme programming, automated testing, continuous integration / deployment, plenty of communication among stakeholders, pair / mob programming, adaptive and interative cycles, and heavy customer / user involvement.
  
 ---
  <div name="The Three Types of Automated Tests"></div>
@@ -519,6 +526,15 @@ Use a new protractor configuration file that is set up basically just like your 
 <div name="Triplex Testing Community Groups"></div>
 ### Triplex Testing Community Groups
 Please join our facebook group here(!!): [https://www.facebook.com/groups/triplextesting/](#https://www.facebook.com/groups/triplextesting/)
+
+
+<div name="The Jasmine Vs. Chai Debate"></div>
+### The Jasmine Vs. Chai Debate
+
+
+<div name="Triplex Testing Community Groups"></div>
+### The Importance of Having Conversations
+
 
 
 <div name="Triplex Tester Certification"></div>
