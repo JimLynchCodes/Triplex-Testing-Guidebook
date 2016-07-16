@@ -34,7 +34,8 @@ Table of Contents
     - [The Gherkin Comes First](#The Gherkin Comes First)
     - [Executing The Gherkin Scripts](#Executing The Gherkin Scripts)
     - [Executing the Acceptance Tests](#Executing the Acceptance Tests)
-    - [Implementing Step Definitions with Protractor](#Implementing Step Definitions with Protractor)
+    - [Implementing Step Definitions as Web Tests](#Implementing Step Definitions as Web Tests)
+    - [Implementing Step Definitions as Unit Tests](#Implementing Step Definitions as Unit Tests)
     - [Avoiding the UI in Step Definitions](#Avoiding the UI in Step Definitions)
     - [Implementing E2e Tests in a Separate Protractor Config file](#Implementing E2e Tests in a Separate Protractor Conf.js file)
     - [Write Unit Tests and Code TDD Style](#Write Unit Tests and Code TDD Style)
@@ -243,14 +244,17 @@ Add this file to your project and then install the necessary modules
 Now you should be able to run gherkin tests like this:
 `./node_modules/protractor/bin/protractor acceptance-tests.config.js`
 
-<div name="Implementing Step Definitions with Protractor"></div>
-### Implementing Step Definitions with Protractor Selenium Tests
+<div name="Implementing Step Definitions as Web Tests"></div>
+### Implementing Step Definitions as Web Tests
 If you are using the protractor config file above then you might notice that for the step definition files it's only looking for .steps.js files. This means we can put them anywhere in our project, and we don't need any *step_definitions* folders (but if you think it makes things more readable go ahead and use them). The scenarios will almost always be from a user's point of view, and so it naturally follows to automate the tests from the user's point of view. This is why we write low level step definitions with protractor api. Your scenarios should just describe things that should happen, and in the protractor tests you can *expect* those things to happen after clicking (or interacting with in another way) some element on the page. Also, notice that these tests are still using the underlying functions of the application and so the protractor tests are indirectly testing individual functions of the application. However, because this protractor tests check the application in a *black box* fashion, when errors fail it's tough to find the root cause of issues from these tests alone. 
+
+<div name="Implementing Step Definitions as Unit Tests"></div>
+### Implementing Step Definitions as Unit Tests
+While using protractor to interact with your page can feel pretty awesome and empowering, don't think that you *have* to write every step definition as a web test. In your *given* statement instead of calling browser.get('./index); we could jsut as well use mocha and angular-mocks and the **inject** keyword to get a reference to our angular objects () in a vacuum. This has the advantage of running a little faster so definitely consider using these instead of web tests when you can. 
 
 <div name="Avoiding the UI in Step Definitions"></div>
 ### Avoiding the UI in Step Definitions
-[TODO]
-Sometimes...
+As mentioned above in "Implementing Step Definitions as Unit Tests", your tests will run faster if they are set up as unit tests instead of web tests. What do industry experts think about this? Here is an [article by Martin Fowler](#http://martinfowler.com/bliki/TestPyramid.html) where he endoreses the *Test Pyramid*, an automated testing concept which recognises the importance of web tests (or ui tests as he calls them) but recommends that you have proportionately more unit tests. In [this podcast episode](#https://cucumber.io/blog/2016/05/09/cucumber-antipatterns) by the folks at CucumberBDD they describe "too many web tests" or "only web tests" as an anti-pattern. They also note this good rule of thumb: *never have scenario outlines that are web tests.* The Scenario outlines are normally meant for different situations or business outcomes. You can have one (or even more than one) web test to make sure the right thing on the page is updating. Then illustrate each example in a unit test step definition in a scenario outline to ensure the calculations or business logic. turn out at they should. 
 
 <div name="Implementing E2e Tests in a Separate Protractor Conf.js file"></div>
 ### Implementing E2e Tests in a Separate Protractor Conf.js file.
@@ -580,7 +584,9 @@ If you've been practicing Triplex Testing Development for over a year and would 
 ### Q9. Will the theory of Triplex Testing work for [insert favorite platform here]?
 
 
-
+Works Cited 
+1. Test Pyramid Article by Martin Fowler: [http://martinfowler.com/bliki/TestPyramid.html](#http://martinfowler.com/bliki/TestPyramid.html)
+2. [CucumberBDD Podcast - Cucumber Anti-Patterns](#https://cucumber.io/blog/2016/05/09/cucumber-antipatterns)
 
 ---
 
