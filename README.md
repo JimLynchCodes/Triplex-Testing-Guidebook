@@ -16,6 +16,7 @@ Table of Contents
     - [It's Not Specific To Angular](#It's Not Specific To Angular)
     - [This is a Guide for Developing Software](#This is a Guide)
     - [Is This Yet Another Interpretation of "Agile"?](#Is This Yet Another Interpretation of Agile?)
+    - [Perfect Code Over Time Is Attainable](#Perfect Code Over Time Is Attainable)
   - [Part 2: The Three Types of Automated Tests](#The Three Types of Automated Tests)
     - [Overview of the Three Parts](#Overview of the Three Parts)
     - [The Triplex Diagram](#The Triplex Diagram)
@@ -104,6 +105,13 @@ This document is meant to be a guide for implementing triplex testing into your 
 This question here is whether Triplex Testing is really just another interpretation of "Agile methodologies". In some ways, yes. Triplex Testing values many of the core agile principles, but I like to think that Triplex Testing is a bit more description about *how* you acutally go about working this way from a programming point of view. In fact, Triplex Testing is so focused on the technical aspects that I would recommend any team attempting to try this to also look into [Design Driven Devlopment](#http://www.designdrivendevelopment.org/) and [Agile Project Management](#https://www.mountaingoatsoftware.com/agile/agile-project-management) since, while we think these are important, they are not covered in this guidebook. It seems that everyone has their own personal version of what agile means to them. We consider Triplex Testing to be a methodology that overlaps with Agile in that it values things like extreme programming, automated testing, continuous integration / deployment, plenty of communication among stakeholders, pair / mob programming, adaptive and interative cycles, and heavy customer / user involvement.
  
 ---
+ <div name="Perfect Code Over Time Is Attainable"></div>
+### Perfect Code Over Time Is Attainable
+Software is an interesting thing in that it needs to be 100% perfect or else it doesn't work, everything breaks, and the users are disgusted! Because of this level of perfection that is inherently needed, it would be wise to treat any software project that plans to go into production as if it were a NASA project, and if it were the government itself of something country. What I'm trying to get at here is that there needs to be a series of checks and balances in place so that it is virtually impossible for all the tests to be passing and have something wrong. *And when some bug IS discovered* or a new featuer is requested Triplex Testing gives us a clear path of 1. setting up gherkin feature files, 2.implementing the step definitions, 3. implementing and e2e tests, and 4. writing unit tests along with the production code. I'll discuss more in later sections what exactly I mean by *perfect code*, but just know that without a solid suite of automated tests it will be an **extremely challenging, stressful, burdensome journey with horrific surprises, frustration pain.** You might get lucky and put something out once that works, but if you want to be a nimble dev team that moves fast then sooner of later you will slip and push a bug without tests. As software is an all-or-nothing deal, pushing bugs is devestating and could potentially ruin your product, brand, and business. If you want to be a wild cowboy coder with no tests, do it on your side projects. *For code that's going into production, use Triplex Testing!*        
+
+
+---
+
  <div name="The Three Types of Automated Tests"></div>
 ## Part 2: The Three Types of Automated Tests
 
