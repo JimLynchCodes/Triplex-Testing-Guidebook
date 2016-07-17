@@ -633,7 +633,7 @@ Yes! Although in this guidebook I focused on JavaScript and AngularJS, the theor
 
 2. CucumberBDD Podcast - Cucumber Anti-Patterns: [https://cucumber.io/blog/2016/05/09/cucumber-antipatterns](#https://cucumber.io/blog/2016/05/09/cucumber-antipatterns)
 
-3. report sample links
+3. Cucumber Report Live Demo: [http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-bootstrap.html](#http://htmlpreview.github.io/?https://github.com/gkushang/grunt-cucumberjs/blob/cucumber-reports/test/cucumber-reports/cucumber-report-bootstrap.html)
 
 4. Agile Manifesto: [http://agilemanifesto.org/](#http://agilemanifesto.org/)
 
