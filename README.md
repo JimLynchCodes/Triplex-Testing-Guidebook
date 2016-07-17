@@ -63,11 +63,11 @@ Table of Contents
     - [Why "Test Your Own Code" Is a Terrible Policy](#Why Test Your Own Code Is a Terrible Policy)
     - [Triplex Testing and the V-Model](#Triplex Testing and the V-Model)
     - [Effective Collaboration and Mob Programming](#Effective Collaboration and Mob Programming)
-    - [Triplex Tester Certification](#Triplex Tester Certification)
     - [Exploratory Testing](#Exploratory Testing)
     - [Triplex Testing Community Groups](#Triplex Testing Community Groups)
     - [The Jasmine Vs. Chai Debate](#The Jasmine Vs. Chai Debate)
     - [The Importance of Having Conversations](#The Importance of Having Conversations)
+    - [Triplex Tester Certification](#Triplex Tester Certification)
   - [Part 8: Frequently Asked Questions](#FAQ)
     - [Q1. Is it wrong to treat low level step definitions like unit tests?](#Q1)
     - [Q2. Do I *need* to use acceptance tests?](#Q2)
@@ -373,7 +373,7 @@ You can put .spec.js files anywhere in the src/ folder and they will automatical
 <div name="All the Browsers in All the Land"></div>
 ### All the Browsers in All the Land
 All the Browsers in All the Land
-
+One amazing tool that is available to you is Sauce Labs. This is a service that you can hook into right from your configuration files that allows you to run your tests on your application code while running on a plethora of different browsers and environments (over 600)! 
 
 
 <div name="Deployment"></div>
@@ -552,7 +552,7 @@ Sadly, many companies simply don't take automated seriously enough.  If your com
 
 <div name="Triplex Testing and the V-Model"></div>
 ### Triplex Testing and the V-Model
-
+The V-Model is a common diagram used to describe the software lifecycle as phases and shows how the different levels of testing are importance at each phase. V-Model is a type of agile that highly values automated testing, specifically 4 types: acceptance testing, unit testing, system testing, and integration testing. Indeed, this may feel eerily similar to Triplex Testing which basically rolls up integration and system testing into one idea (although you could very well separate them into different configuration files if you wish). The V-Model diagram directly applies to Triplex Testing. The critical thing to remember about the V-Model is that it illustrates the business value at each stage of development of having all three (or four depending on how you look at it) suites of automated tests.
 
 
 <div name="Effective Collaboration and Mob Programming"></div>
@@ -593,35 +593,39 @@ If you've been practicing Triplex Testing Development for over a year and would 
 
 <div name="Q1"></div>
 ### Q1. Is it wrong to treat low level step definitions like unit tests?
+No. Although do you want to have coverage of all UI in web tests, going through the same GUI over and over to test the underlying business logic can slow down your test suite more than it needs to be. In the CucumberBDD Antipatterns podcast episode they describe having "all web tests" as an anti-pattern, and they recommend looking for opportunities to swap out web tests for faster-running unit test sytle step definitions.   
 
 <div name="Q2"></div>
 ### Q2. Do I need to use acceptance tests?
+**YES.** The acceptance tests are, arguably, the most important tests of all. These ensure that *you are building the right software.* Having feature files with scenarios written in Gherkin helps flesh out misunderstandings early, and provides developers with a clear path for *what to do next*, a classic issue for traditional TDD practictioners. You also miss out on the cucumber living documentation / generated reports and thus can't show it to the rest of the team. You requirements are written in some other palce (if at all) and quickly become out of sync with the code base. One simply cannot effectively do Triplex Testing without acceptance tests.  
 
 <div name="Q3"></div>
 ### Q3. Do I need to use unit tests? 
+**Yes.** The acceptance tests provide you with a way of checking that *you are building the right software*, but you still need to be sure that *you are building the software right.* Unit tests will pinpoint the exact line number of what's causing the problem where web tests will sometimes only be able to tell you *that something is broken, but not why.* Unit tests are key to having confidence in your code and encourages lots of worry-free refactoring. Write unit tests!  
 
 <div name="Q4"></div>
 ### Q4. Do I need to use e2e tests?
+**Yes.** The first time that Billy Bob's backend starts acting fishy and your program breaks, you're going to drive yourself crazy not knowing if it's an issue with your code or his code. If you are using **anything** external to your client side code, why not set up a tests solely to ensure that the endpoint works as expected?
 
 <div name="Q5"></div>
 ### Q5. When should I NOT use the Testing Triplex?
-
+Triplex Testing is a long-term way of developing serious projects that are meant to eventually go into production and have real users.  There is some set up and background knowledge required to correctly implement Triplex Testing. The only times you shouldn't use it are for throw-away test projects where you don't care about having buggy software, misunderstanding the stakeholders'requirements,or providing exactly the right functionality. 
 
 <div name="Q6"></div>
 ### Q6. Most Cucumber / BDD examples have a root level "features" folder. Why don't you follow this convention?
-
+Having a root level features folder with a complete parrallel directory structure is an old-school pattern from before we had nice built scripts that could pull out test files from the src directory. The key thing to avoid is **scrolling like mad syndrome**, a problem that occurs when you have parralel directory structures. Symptoms of this virus are developers cursing themselves and their projects because their are forced to violently scross through their project explorer to find companion files for some simple comnponent. Don't give your projects *scrolling like mad syndrome.* Don't create parrallel directories of your whole project. 
 
 <div name="Q7"></div>
 ### Q7. My boss says we don't have enough time for testing. What should I do?
-
+Remind him that nobody wants 99% code. Every project should be given the earnest effort that it deserves, and nothing should be done half-heartedly. If there isn't enoguh time for perfect code, the project shouldn't begin in the first place. 
 
 <div name="Q8"></div>
 ### Q8. Can't we just manually test everything?
-
+Manually testing is easy for incredibly small projects, but as the codebase grows manual testing quickly becomes time-consuming, expensive, error-prone, and just plan infeasible. You can't take advantage of all the browsers on Sauce Labs, and you get any automatically generated reports from manual testing. Manual testing should only really be used as a last resort and a means for exposing useful exploratory tests (that could then be automated once found).
 
 <div name="Q9"></div>
 ### Q9. Will the theory of Triplex Testing work for [insert favorite platform here]?
-
+Yes! Although in this guidebook I focused on JavaScript and AngularJS, the theory of combining acceptance, unit, and e2e tests can be applied to virtually any front-end platform, and even backend software as well! 
 
 Works Cited 
 1. Test Pyramid Article by Martin Fowler: [http://martinfowler.com/bliki/TestPyramid.html](#http://martinfowler.com/bliki/TestPyramid.html)
