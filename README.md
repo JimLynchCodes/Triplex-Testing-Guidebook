@@ -1,7 +1,7 @@
 
 # <img src="./images/nice-triforce.png" height="30"> ~ The Triplex Testing Guidebook ~ <img src="./images/nice-triforce.png" height="30">
 
-*Official tagline: 
+*Official tagline: li
 A three-pronged approach to building great software with automated tests.*
 
 *Less trendy, but more descriptive tagline: 
@@ -428,14 +428,42 @@ Manual testing can be a huge drain on time and resources. Of course you may not 
 
 <div name="Living Documentation"></div>
 ### Living Documentation
-Cucumber reports, unit test reports, protractor reports(?)
+The Living Documentation that is generaeted by your test runners is the key to the success of BDD. This article defines it well when it describes Living Documentation as, *"a dynamic method of system documentation that provides information that is current, accurate and easy to understand".* 3 Your cucumber tests and e2e tests generate json output that can be viewed by the html and css of your reports. With Istanbul (or similar code coverae tools for non-JavaScript projects) you have living documentation for your unit tests as well. Great documentation served up nicely on a web page; you can have it without ever having to write it! I know it sounds like a dream, but it's not. Leveraging the reports as much as possible to make high level decisions is key to BDD, and help tremendously in the long run. If you're just adopting Triplex Testing remember that generating and reading these three reports is **critical**. If you're an old pro, think back to projects where you didn't have them and remember not to take them for granted!
 
 ---
 <div name="Reporting"></div>
 ## Part 5: Reporting
+The type of reports we recommend in Triplex Testing are *generated* from the code, specifically from the terst runners. These runners will output information about each test, it's name, all the code it, whether it's passing or failing, etc. into a json object. Many open-source and private report templates have been developed to view and even interact with the json output. The report html and css are just static files that act as a shell or skeleton which you point to your json output file.
 
 <div name="Generating Reports From the Codebase"></div>
 ### Generating Reports From the Codebase
+Generating the json from your test runners is relatively straightforward. When running protractor (for our cucumber / acceptance and e2e tests) we can specify this option in the protractor configuration file:
+
+*(Snippet from protractor-acceptance.conf.js)*
+```
+ resultJsonOutputFile: 'acceptance-reports/acceptance-report-data.json',
+```
+
+This will recreate and overwrite the file *acceptance-report-data.json* each time the tests are run. For units tests I recommend using Istanbul and running the tests with Karma. In your karma configuration file you can set similar settings for the location where you want the reports files to be placed.
+
+*(Snippet from karma.conf.js)*
+```
+ plugins : [
+      'karma-phantomjs-launcher',
+      'karma-angular-filesort',
+      'karma-coverage',
+      'karma-jasmine',
+      'karma-ng-html2js-preprocessor'
+    ],
+
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
+```
+
+The key thing to realize is that the developers never need to stop what they are doing to "work on documentation". They can focus solely on writing good tests and making them pass, but at any time anyone can stop and look at the current progress and road ahead by these automatically generated reports. This is therefore extremely efficient, and because of it's level of detail and sleek interface the reports provide a tremendously valuable communication tool for stakteholders and developers to all work together to build the perfect product.
+
 
 <div name="Meetings with The Boss"></div>
 ### Meetings with "The Boss"
@@ -491,11 +519,17 @@ Example of an e2e report: I haven't found a nice way to visualize this yet, but 
 
 <div name="Official Triplex Projects"></div>
 ## Part 6: Official Triplex Projects
+
 Projects that are offically recognised as following Triplex methodologies.
 
 <div name="NG-NJ"></div>
-###[NG-NJ](#https://github.com/ng-nj/ng-nj.org)
-This i s the official home page for NG-NJ. This site began as a side project by Jim Lynch. It was built on AngularJS 1.4 and was scaffolded with the Gulp-Angular yeoman generator. This was the first project to be officially recognised as a Triplex Testing Project. 
+###NG-NJ
+
+Github Repo: [https://github.com/ng-nj/ng-nj.org](#https://github.com/ng-nj/ng-nj.org)
+
+Live Site: [https://ng-nj.github.io/ng-nj.org/](#https://ng-nj.github.io/ng-nj.org/)
+
+This is the official home page for NG-NJ. This site began as a side project by Jim Lynch. It was built on AngularJS 1.4 and was scaffolded with the Gulp-Angular yeoman generator. This was the first project to be officially recognised as a Triplex Testing Project. 
 
 
 <div name="Closing Thoughts"></div>
@@ -595,6 +629,12 @@ If you've been practicing Triplex Testing Development for over a year and would 
 Works Cited 
 1. Test Pyramid Article by Martin Fowler: [http://martinfowler.com/bliki/TestPyramid.html](#http://martinfowler.com/bliki/TestPyramid.html)
 2. [CucumberBDD Podcast - Cucumber Anti-Patterns](#https://cucumber.io/blog/2016/05/09/cucumber-antipatterns)
+
+
+3. reporting
+
+4. [Agile Manifesto](#http://agilemanifesto.org/)
+5. [Living Documentation Article](#http://searchsoftwarequality.techtarget.com/definition/living-documentation)
 
 ---
 
