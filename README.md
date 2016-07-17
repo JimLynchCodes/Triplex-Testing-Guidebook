@@ -5,7 +5,7 @@
 A three-pronged approach to building great software with automated tests.*
 
 *Less trendy, but more descriptive tagline: 
-A methodology for leveraging automated acceptance, e2e, and unit tests building great front-end applications (especially with JavaScript and SPA frameworks such as Angular).*
+A methodology for leveraging automated acceptance, e2e, and unit tests to build great front-end applications (especially with JavaScript and SPA frameworks such as Angular).*
 
 ---
 
