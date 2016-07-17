@@ -78,7 +78,7 @@ Table of Contents
     - [Q7. My boss says we don't have enough time for testing. What should I do?](#Q7)
     - [Q8. Q8. Can't we just manually test everything?](#Q8)
     - [Q9. Will the theory of Triplex Testing work for [insert favorite platform here]?](#Q9)
-
+  - [Part 9: Works Cited](#Works Cited)
 
 <div name="Intro to The Testing Triplex"></div>
 ## Part 1: Intro to The Testing Triplex
@@ -627,15 +627,18 @@ Manually testing is easy for incredibly small projects, but as the codebase grow
 ### Q9. Will the theory of Triplex Testing work for [insert favorite platform here]?
 Yes! Although in this guidebook I focused on JavaScript and AngularJS, the theory of combining acceptance, unit, and e2e tests can be applied to virtually any front-end platform, and even backend software as well! 
 
-Works Cited 
+<div name="Works Cited"></div>
+## Works Cited 
 1. Test Pyramid Article by Martin Fowler: [http://martinfowler.com/bliki/TestPyramid.html](#http://martinfowler.com/bliki/TestPyramid.html)
+
 2. [CucumberBDD Podcast - Cucumber Anti-Patterns](#https://cucumber.io/blog/2016/05/09/cucumber-antipatterns)
 
-
-3. reporting
+3. (report sample links)
 
 4. [Agile Manifesto](#http://agilemanifesto.org/)
+
 5. [Living Documentation Article](#http://searchsoftwarequality.techtarget.com/definition/living-documentation)
+
 6. [Mob Programming CucumberBDD Podcast Episode](#https://cucumber.io/blog/2016/04/19/mob-programming)
 
 ---
