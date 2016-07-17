@@ -487,7 +487,7 @@ For Angular (and pretty much all front-end applications) code coverage is done w
 <img src="./images/unit-test-report-file-view_js.png">
 
 
-Example of an e2e report: I haven't found a nice way to visualize this yet, but the e2e protractor script does output json reporting to a file:
+Example of an e2e report: I haven't found a nice open-source template to visualize this yet, but the e2e protractor script does output json reporting to a file:
 
 ```
 [
@@ -536,9 +536,6 @@ This is the official home page for NG-NJ. This site began as a side project by J
 ## Part 7: Closing Thoughts
 
 
-
-
-- [The Mythical "Fourth Plex"](#The Mythical Fourth Plex)
 <div name="The Mythical Fourth Plex"></div>
 ### The Mythical "Fourth Plex"
 Triplex testing is based on the three core types of automated testing: acceptance tests, e2e tests, and unit tests. Armed with these, you're capable of incredibly solid coverage of your entire application. Often the unsual tests such as exploratory and smoke tests as grouped into the e2e testing category (as they should be). However, there are times when another method of automated testing emerges that doesn't fit into any of the three categories, and this is sometimes referred to as, "a fourth plex". For example,  [percy.io](https://percy.io/) is a tool for "visual regression testing" that can alert you of any unwanted visual changes from css or anything else. As new tools emerge and you find use cases for them in your work it would be silly not to take advantage of them. Just keep the core theories of Triplex testing in mind and view and fourth plex as an additional weapon in your automated testing arnesal.
@@ -549,7 +546,7 @@ Triplex testing is based on the three core types of automated testing: acceptanc
 There is a type of culture that is instilled in teams that are working well in triplex testing development. Code is an interesting thing because if it isn't "perfect" it's not yet finished. I say *perfect* in quotes because the word can have many different meanings. Some may consider code with no errors and that contains no bugs when it runs to be perfect. For some, perfect code has a type of aesthetic requirement or must be in a certain style, and still others will say it's perfect if and only if all it's relevant tests from all three areas have been identified, written, and passing in all cases. "Laid back perfection" should be a mantra and part of the corporate culture. Obviously, humans are imperfect beings and at times make mistakes. The key is that there is a series of checks  and balances that prevents imperfect code from reaching the end of the pipeline, the users. The testing triplex acts as the team's ultimately safety net and acts as a safegaurd that only allows perfect code to be deployed. Thus, there is no need for developers to be in hyper-alert mode or to manually ensure that there are no bugs. Ideally, this results in perfect code being pushed live without headache or worry from the developer team.   
 
 <div name="Why Test Your Own Code Is a Terrible Policy"></div>
-## Why "Test Your Own Code" Is a Terrible Policy
+### Why "Test Your Own Code" Is a Terrible Policy
 Sadly, many companies simply don't take automated seriously enough.  If your company has a "test your own code policy" then it has a **superficial testing ideaology that is not truly a part of the development process** in the way that Triplex Testing prescribes. Acceptance tests in particular are not just the developer's responsibility but the responsiblity of *every* member of the team. Developers working with business analysts and other developers helps promote a better understanding of the codebase for everyone, fosters ubiquitous language, and allows the team to hammer down a collective understanding of the requirements (and have the in english writing that, as a bonus, is executable). As the company grows and junior developers are brought on "test your own code" becomes "test your own code... or not" and then the whole system really breaks down, and all of the sudden the team is not doing triplex testing at all! Harnessing these three automated testing methodologies can be challenging, and let's be honest- many great "production code" developers don't know the first thing about unit tests. Putting ownership on code files and assignments crushes colalboration and destroys opportunities for learning and intellectual advancement. Policy's like "test your own code" raise an even larger red flag about how the company attributes certain code to a particular person. This puts a lot of risk in *weak links*, depency on *tribal knowledge*, and it becomes diffult to pass of to a BAU team. Many agile circles agree that it is tremendously more beneficial for the developers and the end product itself if there is a *collective ownership* of the code.
 
 
@@ -560,7 +557,7 @@ Sadly, many companies simply don't take automated seriously enough.  If your com
 
 <div name="Effective Collaboration and Mob Programming"></div>
 ### Effective Collaboration and Mob Programming
-
+Mob programming basically takes pair programming to the next level. A group of people site around one computer. One person is the navigater explaining what should be done next, one person is the driver typing at the keyboard, and everyone else helps as needed. Every so often you rotate. This concept is mentioned in an number of agile and BDD books since it is pretty much the ultimate form of communication and collaboration in the writing of all the code. There naturally becomes a very strong ubiquitous language, colelctive code ownership, and awareness of all relevant pieces. For more on Mob Programming check out this great podcast with Woody and the CucumberBDD team.6 They do a great job of defining *wasted time* and make an excellent business case for mob programming.
 
 <div name="Exploratory Testing"></div>
 ### Exploratory Testing
@@ -576,11 +573,11 @@ Please join our facebook group here(!!): [https://www.facebook.com/groups/triple
 
 <div name="The Jasmine Vs. Chai Debate"></div>
 ### The Jasmine Vs. Chai Debate
+It is unfortunate that we even have to have this "debate". Jasmine and Chai-Mocha are two different libraries for writing unit tests and doing assertions in tests. Jasmine seems to be more popular in the Angular community and it used by default for many scaffolded projects, karma, and protractor. I also personally like the syntax of Jasmine a little better, although both provide a BDD style "expect-to" syntax. The trouble with Jasmine is that is an "all-out unit testing framework" as opposed to a testing library and an assertion library. This means that you won't be able to use Jasmine-style assertions in your low level step definitions which is why we use Chai-Mocha in step definition tests.
 
-
-<div name="Triplex Testing Community Groups"></div>
+<div name="The Importance of Having Conversations"></div>
 ### The Importance of Having Conversations
-
+The process of developing software is a continuous journey of discovery. The concept of *The Three Amigos* is often used in BDD to represent the tester, the developer, and the business analyst. By having conversations and *really* thrashing out the details the team can get on the right path early and avoid unnecessary misunderstandings that often happen on projects with poor team communication. The result of these conversatins should be new or updates to existing examples written in the code as *scenarios*.
 
 
 <div name="Triplex Tester Certification"></div>
@@ -635,6 +632,7 @@ Works Cited
 
 4. [Agile Manifesto](#http://agilemanifesto.org/)
 5. [Living Documentation Article](#http://searchsoftwarequality.techtarget.com/definition/living-documentation)
+6. [Mob Programming CucumberBDD Podcast Episode](#https://cucumber.io/blog/2016/04/19/mob-programming)
 
 ---
 
