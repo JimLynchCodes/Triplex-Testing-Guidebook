@@ -631,15 +631,15 @@ Yes! Although in this guidebook I focused on JavaScript and AngularJS, the theor
 ## Works Cited 
 1. Test Pyramid Article by Martin Fowler: [http://martinfowler.com/bliki/TestPyramid.html](#http://martinfowler.com/bliki/TestPyramid.html)
 
-2. [CucumberBDD Podcast - Cucumber Anti-Patterns](#https://cucumber.io/blog/2016/05/09/cucumber-antipatterns)
+2. CucumberBDD Podcast - Cucumber Anti-Patterns: [https://cucumber.io/blog/2016/05/09/cucumber-antipatterns](#https://cucumber.io/blog/2016/05/09/cucumber-antipatterns)
 
-3. (report sample links)
+3. report sample links
 
-4. [Agile Manifesto](#http://agilemanifesto.org/)
+4. Agile Manifesto: [http://agilemanifesto.org/](#http://agilemanifesto.org/)
 
-5. [Living Documentation Article](#http://searchsoftwarequality.techtarget.com/definition/living-documentation)
+5. Living Documentation Article: [http://searchsoftwarequality.techtarget.com/definition/living-documentation](#http://searchsoftwarequality.techtarget.com/definition/living-documentation)
 
-6. [Mob Programming CucumberBDD Podcast Episode](#https://cucumber.io/blog/2016/04/19/mob-programming)
+6. Mob Programming CucumberBDD Podcast Episode: [https://cucumber.io/blog/2016/04/19/mob-programming](#https://cucumber.io/blog/2016/04/19/mob-programming)
 
 ---
 
