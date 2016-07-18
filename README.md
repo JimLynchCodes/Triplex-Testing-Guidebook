@@ -67,6 +67,7 @@ Table of Contents
     - [Triplex Testing Community Groups](#Triplex Testing Community Groups)
     - [The Jasmine Vs. Chai Debate](#The Jasmine Vs. Chai Debate)
     - [The Importance of Having Conversations](#The Importance of Having Conversations)
+    - [How Could It Not Be Perfect?](#How Could It Not Be Perfect?)
     - [Triplex Tester Certification](#Triplex Tester Certification)
   - [Part 8: Frequently Asked Questions](#FAQ)
     - [Q1. Is it wrong to treat low level step definitions like unit tests?](#Q1)
@@ -578,6 +579,10 @@ It is unfortunate that we even have to have this "debate". Jasmine and Chai-Moch
 <div name="The Importance of Having Conversations"></div>
 ### The Importance of Having Conversations
 The process of developing software is a continuous journey of discovery. The concept of *The Three Amigos* is often used in BDD to represent the tester, the developer, and the business analyst. By having conversations and *really* thrashing out the details the team can get on the right path early and avoid unnecessary misunderstandings that often happen on projects with poor team communication. The result of these conversatins should be new or updates to existing examples written in the code as *scenarios*.
+
+<div name="How Could It Not Be Perfect?"></div>
+### How Could It Not Be Perfect?
+If worry and histeria are the feelings of programmers who launch code with no tests, this captures the feeling of the complete opposite side of the spectrum. When you're CI server makes sure you don't slip, your unit test coverage is at 100%, your passing acceptance tests describe the business value of the system well, all external endpoints are working properly, and even manual exploratory tests can't poke any holes in it then you begin to develop a deep sense of trust in your tests and a confidence that the code does what it should and does it well. It should not be understated that this is a very romantic idea of development, but any team with enough discpline can get there. Lean on your tests. Depend on them so much that they give you the confidence to look any stakeholder in the eye, smile, and say, "How could it not be perfect?". 
 
 
 <div name="Triplex Tester Certification"></div>
