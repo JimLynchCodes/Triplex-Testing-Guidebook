@@ -46,6 +46,7 @@ Table of Contents
     - [Everyone Reads the Gherkin, Dev's Change the Gherkin](#Everyone Reads, Devs Change)
     - [No Manual Testers](#No Manual Testers)
     - [The BAU Handoff](#The BAU Handoff)
+    - [The Three Deliverables](#The Three Deliverables)
   - [Part 4: Additional Benefits of Triplex Development](#Additional Benefits of Triplex Development)
     - [Better Team Communication and Ubiquitous Language](#Better Team Communication and Ubiquitous Language)
     - [The Requirements and Code Are Always In Sync](#The Requirements and Code Are Always In Sync)
@@ -409,6 +410,17 @@ Too often large development companies have qa teams that are just squads of manu
 <div name="The BAU Handoff"></div>
 ### The BAU Handoff
 Let's be honest. Teams that can practice Triplex Testing well and can build perfect software quickly are best utlized to do just that- *to build.* At some point in any project (possibly years after it has been started), at some point there are no more bugs to fix and no more features to add. However, we cannot just completely abandon our software out in the wild. Things change and break and need to maintained, and *somebody* needs to do it. These developers are referred to as the *Business As Usual*, or BAU, team. The [agile manifesto](#) clearly values, "Working software over comprehensive documentation". The great thing about Triplex Testing is that you need to focus only on working software (and writing working test code). By the automated generation of reports, especially the cucumber reports, the BAU team has available to them a very comprehensive and easy to read for of ducomentation for what the code should do! I also recommend writing a relatively detailed README file for each project, at the very least describing how the project was scaffolded and what task runner scripts are available.
+
+
+<div name="The Three Deliverables"></div>
+### The Three Deliverables
+When practicing Triplex Testing well there will be many deliverables, but we can put them into three high level groups:
+
+- Clean Build: The final, minified files ready to be hosted live to the users.
+- Source Code: The raw project, able to be picked up and continued by any developer at any time in the future.
+- Tests: You will have at least three configuration files for running tests, the actual files themselves full of the test code, and the reports generated from each of the three test types. 
+
+The important thing to note here is that any developer can provide the first two deliverables, but it's the last one that is really the crux of Triplex Testing and provides the most value in the long run. Put a lot of effort into making your automated tests a nice deliverable. You'll be glad you did!
 
 ---
 
