@@ -50,7 +50,7 @@ Table of Contents
   - [Part 4: Additional Benefits of Triplex Development](#Additional Benefits of Triplex Development)
     - [Better Team Communication and Ubiquitous Language](#Better Team Communication and Ubiquitous Language)
     - [The Requirements and Code Are Always In Sync](#The Requirements and Code Are Always In Sync)
-    - [No Manual Testing](#No Manual Testing)
+    - [Minimize Manual Testing](#Minimize Manual Testing)
     - [Living Documentation](#Living Documentation)
   - [Part 5: Reporting](#Reporting)
     - [Generating Reports From the Codebase](#Generating Reports From the Codebase)
@@ -436,8 +436,8 @@ It is truly amazing how much gherkin feature files can bring a team together. Th
 ### The Requirements and Code Are Always In Sync
 One of the really nice things about using gherkin feature files instead of having some external planning software is that with gherkin your plans are always in sync with your tests, and your test are always in sync with your code. Thus, the plans stay in sync with the the code. When you plans are not directly embedded in the code it becomes easy to let the plans become out of date and brush them aside. With gherkin, these plans are executed via the command line and drive the decision for acceptance of the entire codebase. This gives the planning an importance unlike any other methodology, and they necessarily must be maintained, taken seriously, and should be considered as important as any other code for the project. 
 
-<div name="No Manual Testing"></div>
-### No Manual Testing
+<div name="Minimize Manual Testing"></div>
+### Minimize Manual Testing
 Manual testing can be a huge drain on time and resources. Of course you may not remove manual testing *entirely*, but not having a whole QA team of manual testers and shortening the QA time can be hugely beneficial to an organization in terms of saving potentislly burned cash and being more nimble with changes, bug fixes, and releases. In general, whenever you see an opportunity for manual testing instead try to write an automated test for it. 
 
 <div name="Living Documentation"></div>
