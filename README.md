@@ -67,6 +67,7 @@ Table of Contents
     - [Exploratory Testing](#Exploratory Testing)
     - [Triplex Testing Community Groups](#Triplex Testing Community Groups)
     - [The Jasmine Vs. Chai Debate](#The Jasmine Vs. Chai Debate)
+    - [Crafting a Nice README](#Crafting a Nice README)
     - [The Importance of Having Conversations](#The Importance of Having Conversations)
     - [How Could It Not Be Perfect?](#How Could It Not Be Perfect?)
     - [Triplex Tester Certification](#Triplex Tester Certification)
@@ -587,6 +588,11 @@ Please join our facebook group here(!!): [https://www.facebook.com/groups/triple
 <div name="The Jasmine Vs. Chai Debate"></div>
 ### The Jasmine Vs. Chai Debate
 It is unfortunate that we even have to have this "debate". Jasmine and Chai-Mocha are two different libraries for writing unit tests and doing assertions in tests. Jasmine seems to be more popular in the Angular community and it used by default for many scaffolded projects, karma, and protractor. I also personally like the syntax of Jasmine a little better, although both provide a BDD style "expect-to" syntax. The trouble with Jasmine is that is an "all-out unit testing framework" as opposed to a testing library and an assertion library. This means that you won't be able to use Jasmine-style assertions in your low level step definitions which is why we use Chai-Mocha in step definition tests.
+
+<div name="Crafting a Nice README"></div>
+### Crafting a Nice README
+I know, calm down. Yes, one of the core principles of Agile development is to hate on comprehensive documentation, but there is something to be said about project with a nicely made README. For open-source projects this is particulary important because the README is often the first impression of your project. Without seeing any code at all, people want to know what's going on; what it really is. Even if your project is not open source, think about the people in the BAU team or the person who comes after you. Don't you think they would like to know what version of Angular was used, or what generartor it was scaffolded from, or at least what task runners commands are available to be run? A project root-level README.md file is a great place to communicate these things and anything else that might be helpful for another developer to know about hte project.
+
 
 <div name="The Importance of Having Conversations"></div>
 ### The Importance of Having Conversations
