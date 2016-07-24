@@ -1,11 +1,8 @@
 
-# <img src="./images/nice-triforce.png" height="30"> ~ The Triplex Testing Guidebook ~ <img src="./images/nice-triforce.png" height="30">
+# <img src="./images/nice-triforce.png" height="30"> ~ Angular JS Ultimate Guide for Automated Testing ~ <img src="./images/nice-triforce.png" height="30">
+Aka AngularJS "UGAT" (pronounced "ew gat")
 
-*Official tagline: li
-A three-pronged approach to building great software with automated tests.*
-
-*Less trendy, but more descriptive tagline: 
-A methodology for leveraging automated acceptance, e2e, and unit tests to build great front-end applications (especially with JavaScript and SPA frameworks such as Angular).*
+A methodology for leveraging automated acceptance, ui, e2e, and unit, and integration tests to build great front-end applications (especially with JavaScript and SPA frameworks such as Angular).
 
 ---
 
