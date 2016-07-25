@@ -1,7 +1,9 @@
 
 # Deprecated
 
-### This project was moved and renamed to ["Ultimate Guidebook for automated Testing"](#https://github.com/JimTheMan/AngularJS-UGAT)
+### This project was moved and renamed to 
+
+[Ultimate Guidebook for automated Testing](#github.com/JimTheMan/AngularJS-UGAT)
 It was a good life for "Triplex Testing", but unfortunately it had to come to and end. 
 
 ## Triplex Testing: The Good Parts
