@@ -1,4 +1,17 @@
 
+# Deprecated
+
+### This projec was moved and renamed to "Ultimate Guidebook for automated Testing
+It was a good life for "Triplex Testing", but unfortunately it had to come to and end. 
+
+## Triplex Testing: The Good Parts
+
+
+## Triplex Testing: The Not-So=Good Parts
+- acceptance was it's own pillar of testing. In UGAT the acceptance tests are a modificatin of eiter the unit tests, the web/ui tests, or both. 
+- No reason to limit to 3 types
+
+
 # <img src="./images/nice-triforce.png" height="30"> ~ Angular JS Ultimate Guide for Automated Testing ~ <img src="./images/nice-triforce.png" height="30">
 Aka AngularJS "UGAT" (pronounced "ew gat")
 
