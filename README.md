@@ -1,9 +1,9 @@
 
 # Deprecated. :(
 
-### But there is still hope for automated testing in AngularJS!
+### But there is still hope for automated testing!
 
-This project was moved and renamed to [Ultimate Guidebook for automated Testing](#github.com/JimTheMan/AngularJS-UGAT)
+This project was moved and renamed to <a href="https://github.com/JimTheMan/AngularJS-UGAT">Ultimate Guidebook for Automated Testing</a>.
 
 <!--
 
