@@ -3,9 +3,9 @@
 
 This project was moved and renamed to [Ultimate Guidebook for automated Testing](#github.com/JimTheMan/AngularJS-UGAT)
 
+<!--
 
-
-It was a good life for "Triplex Testing", but unfortunately it had to come to and end. 
+It was a good life for "Triplex Testing", but certain ideas have new changed and new patterns were discovered by it's creator, Jim Lynch. If you're interested is learning why it was changing you can read the explanation below. You're ready to get checkout the link above to AngularJS UGAT (Ultimate Guidebook for Automated Testing). 
 
 ## Triplex Testing: The Good Parts
 
@@ -684,3 +684,5 @@ This guide is maintained by ng-nj, the Angular Group of New Jersey.
 ## Disclaimer
 THIS GUIDE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
 HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
